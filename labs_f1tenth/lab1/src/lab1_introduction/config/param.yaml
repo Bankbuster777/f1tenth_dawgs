@@ -1,0 +1,11 @@
+joy:
+  ros__parameters:
+    # device_name: /dev/input/joypad-f710	# was: joypad-f710
+    device_id: 0
+    deadzone: 0.1   # was 0.01(works in joypad-f710) 0.1(works in joypad-xbox)
+    coalesce_interval: 0.01
+
+ackermann_talker:
+  ros__parameters:
+    steering_gain_: 1.0
+    steering_offset_: 0.0

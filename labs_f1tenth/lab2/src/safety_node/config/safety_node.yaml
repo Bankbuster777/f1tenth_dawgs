@@ -1,0 +1,12 @@
+safety_node:
+  ros__parameters:
+    dawgs:
+      ackermann_topic: "/drive"
+      laser_scan_topic: "/scan"
+      odometry_topic: "/odom"
+
+    sim:
+      ackermann_topic: "/drive"
+      laser_scan_topic: "/scan"
+      odometry_topic: "/ego_racecar/odom"
+
