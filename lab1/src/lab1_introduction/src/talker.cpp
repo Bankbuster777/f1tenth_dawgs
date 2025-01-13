@@ -32,15 +32,19 @@ private:
     void publish_ackermann_topic()
     {
         ackermann_msgs::msg::AckermannDriveStamped ackermann_msgs;
+        double v, d, speed, steering_angle;
 
-        double speed = this->get_parameter("v").get_value<double>();
-        double steering_angle = this->get_parameter("d").get_value<double>();
-        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Param get v: %.2lf, d: %.2lf", speed, steering_angle);
+        while(true)
+        {
+            speed = this->get_parameter("v").get_value<double>();
+            steering_angle = this->get_parameter("d").get_value<double>();
+            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Param get v: %.2lf, d: %.2lf", speed, steering_angle);
 
-        ackermann_msgs.drive.speed = speed;
-        ackermann_msgs.drive.steering_angle = steering_angle;
+            ackermann_msgs.drive.speed = speed;
+            ackermann_msgs.drive.steering_angle = steering_angle;
 
-        ackermann_publisher_->publish(ackermann_msgs);
+            ackermann_publisher_->publish(ackermann_msgs);
+        }
     }
 
 };

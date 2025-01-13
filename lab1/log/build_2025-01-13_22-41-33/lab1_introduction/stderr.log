@@ -1,0 +1,7 @@
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In member function ‘[01m[Kvoid Talker::publish_ackermann_topic()[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:35:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kv[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   35 |         double [01;35m[Kv[m[K, d, speed, steering_angle;
+      |                [01;35m[K^[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:35:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kd[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   35 |         double v, [01;35m[Kd[m[K, speed, steering_angle;
+      |                   [01;35m[K^[m[K

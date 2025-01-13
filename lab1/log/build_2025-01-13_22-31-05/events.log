@@ -1,0 +1,324 @@
+[0.000000] (-) TimerEvent: {}
+[0.001130] (lab1_introduction) JobQueued: {'identifier': 'lab1_introduction', 'dependencies': OrderedDict()}
+[0.002530] (lab1_introduction) JobStarted: {'identifier': 'lab1_introduction'}
+[0.072173] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'cmake'}
+[0.080111] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'build'}
+[0.085462] (lab1_introduction) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction', '--', '-j6', '-l6'], 'cwd': '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dawgs_nx'), ('SSH_AGENT_PID', '2075'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/dawgs_nx'), ('OLDPWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1472'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5157'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dawgs_nx'), ('JOURNAL_STREAM', '8:52225'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dawgs_nx'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/dawgs_nx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dawgs:@/tmp/.ICE-unix/2118,unix/dawgs:/tmp/.ICE-unix/2118'), ('INVOCATION_ID', '88be67a2b5704ac9820f54312bd55357'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4d6f3148-3cd8-4b42-99a8-f669c7d72898'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction:/opt/ros/foxy')]), 'shell': False}
+[0.118510] (-) TimerEvent: {}
+[0.222110] (-) TimerEvent: {}
+[0.323255] (-) TimerEvent: {}
+[0.426832] (-) TimerEvent: {}
+[0.463151] (lab1_introduction) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target relay\x1b[0m\n'}
+[0.477015] (lab1_introduction) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[0.527077] (-) TimerEvent: {}
+[0.628240] (-) TimerEvent: {}
+[0.667594] (lab1_introduction) StdoutLine: {'line': b'[ 33%] Built target ackermann_talker\n'}
+[0.728512] (-) TimerEvent: {}
+[0.807573] (lab1_introduction) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/relay.dir/src/relay.cpp.o\x1b[0m\n'}
+[0.828962] (-) TimerEvent: {}
+[0.890266] (lab1_introduction) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o\x1b[0m\n'}
+[0.929196] (-) TimerEvent: {}
+[1.030281] (-) TimerEvent: {}
+[1.133121] (-) TimerEvent: {}
+[1.238962] (-) TimerEvent: {}
+[1.341333] (-) TimerEvent: {}
+[1.445038] (-) TimerEvent: {}
+[1.546769] (-) TimerEvent: {}
+[1.647971] (-) TimerEvent: {}
+[1.749729] (-) TimerEvent: {}
+[1.852173] (-) TimerEvent: {}
+[1.953871] (-) TimerEvent: {}
+[2.055050] (-) TimerEvent: {}
+[2.157356] (-) TimerEvent: {}
+[2.259564] (-) TimerEvent: {}
+[2.362880] (-) TimerEvent: {}
+[2.467332] (-) TimerEvent: {}
+[2.570850] (-) TimerEvent: {}
+[2.675463] (-) TimerEvent: {}
+[2.777399] (-) TimerEvent: {}
+[2.880778] (-) TimerEvent: {}
+[2.984079] (-) TimerEvent: {}
+[3.087624] (-) TimerEvent: {}
+[3.190556] (-) TimerEvent: {}
+[3.291821] (-) TimerEvent: {}
+[3.394083] (-) TimerEvent: {}
+[3.495351] (-) TimerEvent: {}
+[3.599413] (-) TimerEvent: {}
+[3.700563] (-) TimerEvent: {}
+[3.801771] (-) TimerEvent: {}
+[3.902827] (-) TimerEvent: {}
+[4.004906] (-) TimerEvent: {}
+[4.105929] (-) TimerEvent: {}
+[4.207352] (-) TimerEvent: {}
+[4.311166] (-) TimerEvent: {}
+[4.415029] (-) TimerEvent: {}
+[4.520769] (-) TimerEvent: {}
+[4.623422] (-) TimerEvent: {}
+[4.726570] (-) TimerEvent: {}
+[4.828346] (-) TimerEvent: {}
+[4.932162] (-) TimerEvent: {}
+[5.035259] (-) TimerEvent: {}
+[5.137018] (-) TimerEvent: {}
+[5.239020] (-) TimerEvent: {}
+[5.340601] (-) TimerEvent: {}
+[5.442735] (-) TimerEvent: {}
+[5.544553] (-) TimerEvent: {}
+[5.647608] (-) TimerEvent: {}
+[5.748750] (-) TimerEvent: {}
+[5.852974] (-) TimerEvent: {}
+[5.955420] (-) TimerEvent: {}
+[6.056521] (-) TimerEvent: {}
+[6.158472] (-) TimerEvent: {}
+[6.259785] (-) TimerEvent: {}
+[6.361219] (-) TimerEvent: {}
+[6.463352] (-) TimerEvent: {}
+[6.565514] (-) TimerEvent: {}
+[6.668557] (-) TimerEvent: {}
+[6.770738] (-) TimerEvent: {}
+[6.872748] (-) TimerEvent: {}
+[6.977063] (-) TimerEvent: {}
+[7.079052] (-) TimerEvent: {}
+[7.180303] (-) TimerEvent: {}
+[7.281767] (-) TimerEvent: {}
+[7.383347] (-) TimerEvent: {}
+[7.484727] (-) TimerEvent: {}
+[7.586260] (-) TimerEvent: {}
+[7.687394] (-) TimerEvent: {}
+[7.788458] (-) TimerEvent: {}
+[7.889518] (-) TimerEvent: {}
+[7.990613] (-) TimerEvent: {}
+[8.092230] (-) TimerEvent: {}
+[8.196204] (-) TimerEvent: {}
+[8.297507] (-) TimerEvent: {}
+[8.398724] (-) TimerEvent: {}
+[8.499800] (-) TimerEvent: {}
+[8.600954] (-) TimerEvent: {}
+[8.703193] (-) TimerEvent: {}
+[8.806364] (-) TimerEvent: {}
+[8.907573] (-) TimerEvent: {}
+[9.009882] (-) TimerEvent: {}
+[9.111545] (-) TimerEvent: {}
+[9.216237] (-) TimerEvent: {}
+[9.319037] (-) TimerEvent: {}
+[9.420192] (-) TimerEvent: {}
+[9.521344] (-) TimerEvent: {}
+[9.622989] (-) TimerEvent: {}
+[9.723972] (-) TimerEvent: {}
+[9.825598] (-) TimerEvent: {}
+[9.926754] (-) TimerEvent: {}
+[10.029116] (-) TimerEvent: {}
+[10.131066] (-) TimerEvent: {}
+[10.233769] (-) TimerEvent: {}
+[10.334854] (-) TimerEvent: {}
+[10.436528] (-) TimerEvent: {}
+[10.537589] (-) TimerEvent: {}
+[10.638750] (-) TimerEvent: {}
+[10.739842] (-) TimerEvent: {}
+[10.841008] (-) TimerEvent: {}
+[10.942128] (-) TimerEvent: {}
+[11.043260] (-) TimerEvent: {}
+[11.144398] (-) TimerEvent: {}
+[11.246267] (-) TimerEvent: {}
+[11.347355] (-) TimerEvent: {}
+[11.448789] (-) TimerEvent: {}
+[11.553888] (-) TimerEvent: {}
+[11.656124] (-) TimerEvent: {}
+[11.757708] (-) TimerEvent: {}
+[11.858832] (-) TimerEvent: {}
+[11.960060] (-) TimerEvent: {}
+[12.061859] (-) TimerEvent: {}
+[12.165135] (-) TimerEvent: {}
+[12.267238] (-) TimerEvent: {}
+[12.369842] (-) TimerEvent: {}
+[12.477667] (-) TimerEvent: {}
+[12.585650] (-) TimerEvent: {}
+[12.687749] (-) TimerEvent: {}
+[12.790594] (-) TimerEvent: {}
+[12.891756] (-) TimerEvent: {}
+[12.993453] (-) TimerEvent: {}
+[13.095442] (-) TimerEvent: {}
+[13.197299] (-) TimerEvent: {}
+[13.298886] (-) TimerEvent: {}
+[13.400637] (-) TimerEvent: {}
+[13.502560] (-) TimerEvent: {}
+[13.604447] (-) TimerEvent: {}
+[13.707796] (-) TimerEvent: {}
+[13.809600] (-) TimerEvent: {}
+[13.910878] (-) TimerEvent: {}
+[14.012576] (-) TimerEvent: {}
+[14.114166] (-) TimerEvent: {}
+[14.216150] (-) TimerEvent: {}
+[14.318207] (-) TimerEvent: {}
+[14.420320] (-) TimerEvent: {}
+[14.521577] (-) TimerEvent: {}
+[14.623374] (-) TimerEvent: {}
+[14.726060] (-) TimerEvent: {}
+[14.828543] (-) TimerEvent: {}
+[14.930268] (-) TimerEvent: {}
+[15.033766] (-) TimerEvent: {}
+[15.136599] (-) TimerEvent: {}
+[15.238879] (-) TimerEvent: {}
+[15.340800] (-) TimerEvent: {}
+[15.442005] (-) TimerEvent: {}
+[15.543270] (-) TimerEvent: {}
+[15.644496] (-) TimerEvent: {}
+[15.746093] (-) TimerEvent: {}
+[15.847371] (-) TimerEvent: {}
+[15.948764] (-) TimerEvent: {}
+[16.050059] (-) TimerEvent: {}
+[16.151662] (-) TimerEvent: {}
+[16.253261] (-) TimerEvent: {}
+[16.354377] (-) TimerEvent: {}
+[16.456999] (-) TimerEvent: {}
+[16.558684] (-) TimerEvent: {}
+[16.661919] (-) TimerEvent: {}
+[16.763977] (-) TimerEvent: {}
+[16.865683] (-) TimerEvent: {}
+[16.969463] (-) TimerEvent: {}
+[17.071372] (-) TimerEvent: {}
+[17.075469] (lab1_introduction) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[17.171617] (-) TimerEvent: {}
+[17.273548] (-) TimerEvent: {}
+[17.375120] (-) TimerEvent: {}
+[17.477599] (-) TimerEvent: {}
+[17.579009] (-) TimerEvent: {}
+[17.680859] (-) TimerEvent: {}
+[17.782979] (-) TimerEvent: {}
+[17.884923] (-) TimerEvent: {}
+[17.986277] (-) TimerEvent: {}
+[18.053443] (lab1_introduction) StdoutLine: {'line': b'[ 83%] Built target talker\n'}
+[18.086656] (-) TimerEvent: {}
+[18.187984] (-) TimerEvent: {}
+[18.289595] (-) TimerEvent: {}
+[18.390842] (-) TimerEvent: {}
+[18.492430] (-) TimerEvent: {}
+[18.593591] (-) TimerEvent: {}
+[18.695219] (-) TimerEvent: {}
+[18.796828] (-) TimerEvent: {}
+[18.898325] (-) TimerEvent: {}
+[19.000296] (-) TimerEvent: {}
+[19.102528] (-) TimerEvent: {}
+[19.204490] (-) TimerEvent: {}
+[19.305583] (-) TimerEvent: {}
+[19.406748] (-) TimerEvent: {}
+[19.507815] (-) TimerEvent: {}
+[19.609068] (-) TimerEvent: {}
+[19.710623] (-) TimerEvent: {}
+[19.811785] (-) TimerEvent: {}
+[19.912854] (-) TimerEvent: {}
+[20.013954] (-) TimerEvent: {}
+[20.115021] (-) TimerEvent: {}
+[20.216224] (-) TimerEvent: {}
+[20.317599] (-) TimerEvent: {}
+[20.420053] (-) TimerEvent: {}
+[20.521492] (-) TimerEvent: {}
+[20.622810] (-) TimerEvent: {}
+[20.724315] (-) TimerEvent: {}
+[20.825563] (-) TimerEvent: {}
+[20.926699] (-) TimerEvent: {}
+[21.027731] (-) TimerEvent: {}
+[21.129528] (-) TimerEvent: {}
+[21.231419] (-) TimerEvent: {}
+[21.332562] (-) TimerEvent: {}
+[21.435489] (-) TimerEvent: {}
+[21.536803] (-) TimerEvent: {}
+[21.637989] (-) TimerEvent: {}
+[21.741508] (-) TimerEvent: {}
+[21.844046] (-) TimerEvent: {}
+[21.945426] (-) TimerEvent: {}
+[22.046632] (-) TimerEvent: {}
+[22.148172] (-) TimerEvent: {}
+[22.249547] (-) TimerEvent: {}
+[22.350918] (-) TimerEvent: {}
+[22.453764] (-) TimerEvent: {}
+[22.555549] (-) TimerEvent: {}
+[22.658004] (-) TimerEvent: {}
+[22.759107] (-) TimerEvent: {}
+[22.860411] (-) TimerEvent: {}
+[22.961946] (-) TimerEvent: {}
+[23.065218] (-) TimerEvent: {}
+[23.166224] (-) TimerEvent: {}
+[23.267201] (-) TimerEvent: {}
+[23.368216] (-) TimerEvent: {}
+[23.469499] (-) TimerEvent: {}
+[23.570656] (-) TimerEvent: {}
+[23.671987] (-) TimerEvent: {}
+[23.773232] (-) TimerEvent: {}
+[23.874353] (-) TimerEvent: {}
+[23.975509] (-) TimerEvent: {}
+[24.077323] (-) TimerEvent: {}
+[24.179012] (-) TimerEvent: {}
+[24.280227] (-) TimerEvent: {}
+[24.381555] (-) TimerEvent: {}
+[24.482666] (-) TimerEvent: {}
+[24.584023] (-) TimerEvent: {}
+[24.685420] (-) TimerEvent: {}
+[24.786851] (-) TimerEvent: {}
+[24.888557] (-) TimerEvent: {}
+[24.989758] (-) TimerEvent: {}
+[25.090970] (-) TimerEvent: {}
+[25.193307] (-) TimerEvent: {}
+[25.295707] (-) TimerEvent: {}
+[25.396839] (-) TimerEvent: {}
+[25.497861] (-) TimerEvent: {}
+[25.598875] (-) TimerEvent: {}
+[25.699998] (-) TimerEvent: {}
+[25.803403] (-) TimerEvent: {}
+[25.905187] (-) TimerEvent: {}
+[26.006278] (-) TimerEvent: {}
+[26.107415] (-) TimerEvent: {}
+[26.208563] (-) TimerEvent: {}
+[26.309877] (-) TimerEvent: {}
+[26.411465] (-) TimerEvent: {}
+[26.512948] (-) TimerEvent: {}
+[26.614503] (-) TimerEvent: {}
+[26.667887] (lab1_introduction) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable relay\x1b[0m\n'}
+[26.714732] (-) TimerEvent: {}
+[26.815792] (-) TimerEvent: {}
+[26.916894] (-) TimerEvent: {}
+[27.017841] (-) TimerEvent: {}
+[27.118877] (-) TimerEvent: {}
+[27.219946] (-) TimerEvent: {}
+[27.321796] (-) TimerEvent: {}
+[27.423238] (-) TimerEvent: {}
+[27.524327] (-) TimerEvent: {}
+[27.625504] (-) TimerEvent: {}
+[27.726658] (-) TimerEvent: {}
+[27.828103] (-) TimerEvent: {}
+[27.929241] (-) TimerEvent: {}
+[27.945721] (lab1_introduction) StdoutLine: {'line': b'[100%] Built target relay\n'}
+[28.026215] (lab1_introduction) CommandEnded: {'returncode': 0}
+[28.029767] (-) TimerEvent: {}
+[28.042340] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'install'}
+[28.115187] (lab1_introduction) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction'], 'cwd': '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dawgs_nx'), ('SSH_AGENT_PID', '2075'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/dawgs_nx'), ('OLDPWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1472'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5157'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dawgs_nx'), ('JOURNAL_STREAM', '8:52225'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dawgs_nx'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/dawgs_nx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dawgs:@/tmp/.ICE-unix/2118,unix/dawgs:/tmp/.ICE-unix/2118'), ('INVOCATION_ID', '88be67a2b5704ac9820f54312bd55357'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4d6f3148-3cd8-4b42-99a8-f669c7d72898'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction:/opt/ros/foxy')]), 'shell': False}
+[28.131749] (-) TimerEvent: {}
+[28.180402] (lab1_introduction) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.183327] (lab1_introduction) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[28.187451] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/lib/lab1_introduction/talker\n'}
+[28.191503] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/lib/lab1_introduction/relay\n'}
+[28.195906] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp\n'}
+[28.199418] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/lib/lab1_introduction/ackermann_talker\n'}
+[28.203532] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction//launch/ackermann_talker_launch.py\n'}
+[28.207645] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction//config/param.yaml\n'}
+[28.210312] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/ament_index/resource_index/package_run_dependencies/lab1_introduction\n'}
+[28.212861] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/ament_index/resource_index/parent_prefix_path/lab1_introduction\n'}
+[28.215346] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/environment/ament_prefix_path.sh\n'}
+[28.218814] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/environment/ament_prefix_path.dsv\n'}
+[28.221283] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/environment/path.sh\n'}
+[28.223508] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/environment/path.dsv\n'}
+[28.227057] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.bash\n'}
+[28.231128] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.sh\n'}
+[28.232489] (-) TimerEvent: {}
+[28.233288] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.zsh\n'}
+[28.235305] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.dsv\n'}
+[28.237033] (lab1_introduction) StdoutLine: {'line': b'-- Symlinking: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/package.dsv\n'}
+[28.299016] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/ament_index/resource_index/packages/lab1_introduction\n'}
+[28.301618] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/cmake/lab1_introductionConfig.cmake\n'}
+[28.303531] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/cmake/lab1_introductionConfig-version.cmake\n'}
+[28.306973] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/share/lab1_introduction/package.xml\n'}
+[28.309455] (lab1_introduction) StdoutLine: {'line': b'-- Up-to-date: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/bin/ackermann_talker\n'}
+[28.322691] (lab1_introduction) CommandEnded: {'returncode': 0}
+[28.333765] (-) TimerEvent: {}
+[28.436095] (-) TimerEvent: {}
+[28.500290] (lab1_introduction) JobEnded: {'identifier': 'lab1_introduction', 'rc': 0}
+[28.504497] (-) EventReactorShutdown: {}
