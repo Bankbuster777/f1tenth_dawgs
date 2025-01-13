@@ -1,0 +1,8 @@
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:17:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kdrive_topic[m[K’ was not declared in this scope
+   17 |         ackermann_publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>([01;31m[Kdrive_topic[m[K, 10);
+      |                                                                                                   [01;31m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/talker.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

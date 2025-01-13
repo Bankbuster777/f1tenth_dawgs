@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/${destination}")
+      set(destination "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,56 +310,62 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install("TARGETS" "talker" "DESTINATION" "lib/lab1_introduction")
+include("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "relay" "DESTINATION" "lib/lab1_introduction")
+include("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
 # install(DIRECTORY "include/lab1_introduction" "DESTINATION" "include")
-ament_cmake_symlink_install_directory("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" DIRECTORY "include/lab1_introduction" "DESTINATION" "include")
+ament_cmake_symlink_install_directory("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" DIRECTORY "include/lab1_introduction" "DESTINATION" "include")
 
 # install("TARGETS" "ackermann_talker" "DESTINATION" "lib/lab1_introduction")
-include("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/lab1_introduction/")
-ament_cmake_symlink_install_directory("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" DIRECTORY "launch" "DESTINATION" "share/lab1_introduction/")
+ament_cmake_symlink_install_directory("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" DIRECTORY "launch" "DESTINATION" "share/lab1_introduction/")
 
 # install(DIRECTORY "config" "DESTINATION" "share/lab1_introduction/")
-ament_cmake_symlink_install_directory("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" DIRECTORY "config" "DESTINATION" "share/lab1_introduction/")
+ament_cmake_symlink_install_directory("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" DIRECTORY "config" "DESTINATION" "share/lab1_introduction/")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/lab1_introduction/environment")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/lab1_introduction/environment")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/lab1_introduction/environment")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/lab1_introduction/environment")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/lab1_introduction/environment")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/lab1_introduction/environment")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/lab1_introduction/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/lab1_introduction/environment")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/lab1_introduction/environment")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/lab1_introduction/environment")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/lab1_introduction/environment")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/lab1_introduction/environment")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/lab1_introduction/environment")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/lab1_introduction/environment")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/lab1_introduction")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/lab1_introduction")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/lab1_introduction")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/lab1_introduction")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/lab1_introduction")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/lab1_introduction")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/lab1_introduction")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/lab1_introduction")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/lab1_introduction")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/lab1_introduction")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/lab1_introduction")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/lab1_introduction")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/lab1_introduction")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/lab1_introduction")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/lab1_introduction")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/lab1_introduction")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/lab1_introduction")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/lab1_introduction")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/lab1_introduction")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/lab1_introduction")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/packages/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/packages/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/packages/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_index/share/ament_index/resource_index/packages/lab1_introduction" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig.cmake" "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig-version.cmake" "DESTINATION" "share/lab1_introduction/cmake")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig.cmake" "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig-version.cmake" "DESTINATION" "share/lab1_introduction/cmake")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig.cmake" "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig-version.cmake" "DESTINATION" "share/lab1_introduction/cmake")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig.cmake" "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_core/lab1_introductionConfig-version.cmake" "DESTINATION" "share/lab1_introduction/cmake")
 
-# install(FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/package.xml" "DESTINATION" "share/lab1_introduction")
-ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/package.xml" "DESTINATION" "share/lab1_introduction")
+# install(FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/package.xml" "DESTINATION" "share/lab1_introduction")
+ament_cmake_symlink_install_files("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction" FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/package.xml" "DESTINATION" "share/lab1_introduction")

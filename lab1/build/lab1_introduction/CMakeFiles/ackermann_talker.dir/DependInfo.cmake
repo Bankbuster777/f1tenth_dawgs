@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp" "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o"
+  "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/ackermann_talker.cpp" "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include"
+  "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/include"
   "/opt/ros/foxy/include"
   )
 

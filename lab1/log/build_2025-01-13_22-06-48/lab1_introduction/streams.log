@@ -1,0 +1,48 @@
+[0.091s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction -- -j6 -l6
+[0.495s] [35m[1mScanning dependencies of target relay[0m
+[0.620s] [ 16%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[0.676s] [ 50%] Built target ackermann_talker
+[0.841s] [ 66%] [32mBuilding CXX object CMakeFiles/relay.dir/src/relay.cpp.o[0m
+[9.101s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:23:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Krclcpp[m[K’
+[9.102s]    23 |     [01;31m[Krclcpp[m[K::Publisher<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr relay_publisher_;
+[9.103s]       |     [01;31m[K^~~~~~[m[K
+[9.116s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In constructor ‘[01m[KRelay::Relay()[m[K’:
+[9.116s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krelay_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[9.117s]    14 |         [01;31m[Krelay_publisher_[m[K = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>(drive_topic, 10);
+[9.118s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[9.119s]       |         [32m[Krcl_publisher_t[m[K
+[9.207s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In member function ‘[01m[Kvoid Relay::ackermann_callback(ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[9.209s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:30:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstSharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdrive[m[K’
+[9.211s]    30 |         double speed_new = ackermann_msg.[01;31m[Kdrive[m[K.speed * 3;
+[9.213s]       |                                          [01;31m[K^~~~~[m[K
+[9.214s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstSharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdrive[m[K’
+[9.215s]    31 |         double steering_angle_new = ackermann_msg.[01;31m[Kdrive[m[K.steering_angle * 3;
+[9.217s]       |                                                   [01;31m[K^~~~~[m[K
+[9.228s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:37:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krelay_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[9.233s]    37 |         [01;31m[Krelay_publisher_[m[K->publish(drive_relay_msg);
+[9.234s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[9.235s]       |         [32m[Krcl_publisher_t[m[K
+[9.504s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[9.504s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:17:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kdrive_topic[m[K’ was not declared in this scope
+[9.505s]    17 |         ackermann_publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>([01;31m[Kdrive_topic[m[K, 10);
+[9.506s]       |                                                                                                   [01;31m[K^~~~~~~~~~~[m[K
+[9.507s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In member function ‘[01m[Kvoid Talker::publish_ackermann_topic()[m[K’:
+[9.507s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[KAckermann_msgs[m[K’ has not been declared
+[9.508s]    32 |         [01;31m[KAckermann_msgs[m[K::msg::AckermannDriveStamped ackermann_msgs;
+[9.509s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[9.514s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+[9.515s]    38 |         ackermann_msgs[01;31m[K.[m[Kdrive.speed = speed;
+[9.515s]       |                       [01;31m[K^[m[K
+[9.516s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:39:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+[9.517s]    39 |         ackermann_msgs[01;31m[K.[m[Kdrive.steering_angle = steering_angle;
+[9.517s]       |                       [01;31m[K^[m[K
+[9.518s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:41:53:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[9.519s]    41 |         ackermann_publisher_->publish(ackermann_msgs[01;31m[K)[m[K;
+[9.519s]       |                                                     [01;31m[K^[m[K
+[11.735s] make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+[11.736s] make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/talker.dir/all] Error 2
+[11.737s] make[1]: *** Waiting for unfinished jobs....
+[16.646s] make[2]: *** [CMakeFiles/relay.dir/build.make:63: CMakeFiles/relay.dir/src/relay.cpp.o] Error 1
+[16.650s] make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/relay.dir/all] Error 2
+[16.652s] make: *** [Makefile:141: all] Error 2
+[16.673s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction -- -j6 -l6

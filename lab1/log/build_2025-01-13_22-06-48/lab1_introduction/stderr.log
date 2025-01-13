@@ -1,0 +1,42 @@
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:23:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Krclcpp[m[K’
+   23 |     [01;31m[Krclcpp[m[K::Publisher<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr relay_publisher_;
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In constructor ‘[01m[KRelay::Relay()[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krelay_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   14 |         [01;31m[Krelay_publisher_[m[K = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>(drive_topic, 10);
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In member function ‘[01m[Kvoid Relay::ackermann_callback(ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:30:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstSharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdrive[m[K’
+   30 |         double speed_new = ackermann_msg.[01;31m[Kdrive[m[K.speed * 3;
+      |                                          [01;31m[K^~~~~[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstSharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdrive[m[K’
+   31 |         double steering_angle_new = ackermann_msg.[01;31m[Kdrive[m[K.steering_angle * 3;
+      |                                                   [01;31m[K^~~~~[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:37:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krelay_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   37 |         [01;31m[Krelay_publisher_[m[K->publish(drive_relay_msg);
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |         [32m[Krcl_publisher_t[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:17:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kdrive_topic[m[K’ was not declared in this scope
+   17 |         ackermann_publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>([01;31m[Kdrive_topic[m[K, 10);
+      |                                                                                                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In member function ‘[01m[Kvoid Talker::publish_ackermann_topic()[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[KAckermann_msgs[m[K’ has not been declared
+   32 |         [01;31m[KAckermann_msgs[m[K::msg::AckermannDriveStamped ackermann_msgs;
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+   38 |         ackermann_msgs[01;31m[K.[m[Kdrive.speed = speed;
+      |                       [01;31m[K^[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:39:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+   39 |         ackermann_msgs[01;31m[K.[m[Kdrive.steering_angle = steering_angle;
+      |                       [01;31m[K^[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:41:53:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   41 |         ackermann_publisher_->publish(ackermann_msgs[01;31m[K)[m[K;
+      |                                                     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/talker.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/relay.dir/build.make:63: CMakeFiles/relay.dir/src/relay.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/relay.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

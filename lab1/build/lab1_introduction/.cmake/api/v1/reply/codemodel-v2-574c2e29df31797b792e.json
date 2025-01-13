@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lab1_introduction",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ackermann_talker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ackermann_talker-0951ffc535ae44e874a9.json",
+					"name" : "ackermann_talker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lab1_introduction_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab1_introduction_uninstall-5d04c57a6435e1bb4cf8.json",
+					"name" : "lab1_introduction_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "relay::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-relay-efe73ce09c5c76c3be02.json",
+					"name" : "relay",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "talker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-talker-a1b7c90143e2a716e46b.json",
+					"name" : "talker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-6f1b610b53b810d9d7d0.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction",
+		"source" : "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

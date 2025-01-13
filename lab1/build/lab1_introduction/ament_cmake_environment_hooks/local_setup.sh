@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction"}
+: ${AMENT_CURRENT_PREFIX:="/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \

@@ -1,0 +1,15 @@
+[35m[1mScanning dependencies of target relay[0m
+[35m[1mScanning dependencies of target talker[0m
+[ 33%] Built target ackermann_talker
+[ 50%] [32mBuilding CXX object CMakeFiles/relay.dir/src/relay.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:17:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kdrive_topic[m[K’ was not declared in this scope
+   17 |         ackermann_publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>([01;31m[Kdrive_topic[m[K, 10);
+      |                                                                                                   [01;31m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/talker.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 83%] [32m[1mLinking CXX executable relay[0m
+[ 83%] Built target relay
+make: *** [Makefile:141: all] Error 2

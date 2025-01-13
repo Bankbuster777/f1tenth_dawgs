@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction
+CMAKE_SOURCE_DIR = /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction
+CMAKE_BINARY_DIR = /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction
 
 # Utility rule file for uninstall.
 
@@ -67,6 +67,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

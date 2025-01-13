@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp
+/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp
 rclcpp/rclcpp.hpp
-/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/rclcpp/rclcpp.hpp
+/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/include/lab1_introduction/rclcpp/rclcpp.hpp
 ackermann_msgs/msg/ackermann_drive_stamped.hpp
-/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_msgs/msg/ackermann_drive_stamped.hpp
+/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_msgs/msg/ackermann_drive_stamped.hpp
 sensor_msgs/msg/joy.hpp
-/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/sensor_msgs/msg/joy.hpp
+/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/include/lab1_introduction/sensor_msgs/msg/joy.hpp
 
-/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp
+/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/ackermann_talker.cpp
 lab1_introduction/ackermann_talker.hpp
-/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/lab1_introduction/ackermann_talker.hpp
+/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/lab1_introduction/ackermann_talker.hpp
 cmath
 -
 

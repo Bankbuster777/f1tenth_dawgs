@@ -202,9 +202,8 @@ private:
         ackermann_publisher_->publish(drive_msg);
     }
 
-
-
 };
+
 int main(int argc, char ** argv) {
     rclcpp::init(argc, argv);
     rclcpp::spin(std::make_shared<ReactiveFollowGap>());

@@ -28,6 +28,22 @@ find_package(sensor_msgs REQUIRED)
 add_executable(ackermann_talker src/ackermann_talker.cpp)
 ament_target_dependencies(ackermann_talker rclcpp ackermann_msgs sensor_msgs)
 
+add_executable(talker src/talker.cpp)
+ament_target_dependencies(talker rclcpp ackermann_msgs)
+
+install(TARGETS
+  talker
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+add_executable(relay src/relay.cpp)
+ament_target_dependencies(relay rclcpp ackermann_msgs)
+
+install(TARGETS
+  relay
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 include_directories(include)
 
 install(

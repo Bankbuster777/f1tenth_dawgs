@@ -1,8 +1,8 @@
-# Install script for directory: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction
+# Install script for directory: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction")
+  set(CMAKE_INSTALL_PREFIX "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -48,7 +48,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ackermann_talker"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/ackermann_talker")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/ackermann_talker")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ackermann_talker" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/ackermann_talker")
     file(RPATH_CHANGE
@@ -69,5 +69,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

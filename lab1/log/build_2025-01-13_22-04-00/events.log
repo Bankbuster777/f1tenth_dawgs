@@ -1,0 +1,684 @@
+[0.000000] (-) TimerEvent: {}
+[0.000841] (lab1_introduction) JobQueued: {'identifier': 'lab1_introduction', 'dependencies': OrderedDict()}
+[0.001099] (lab1_introduction) JobStarted: {'identifier': 'lab1_introduction'}
+[0.091906] (-) TimerEvent: {}
+[0.096130] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'cmake'}
+[0.100728] (lab1_introduction) Command: {'cmd': ['/usr/bin/cmake', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction'], 'cwd': '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dawgs_nx'), ('SSH_AGENT_PID', '2075'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/dawgs_nx'), ('OLDPWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1472'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5157'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dawgs_nx'), ('JOURNAL_STREAM', '8:52225'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dawgs_nx'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/dawgs_nx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dawgs:@/tmp/.ICE-unix/2118,unix/dawgs:/tmp/.ICE-unix/2118'), ('INVOCATION_ID', '88be67a2b5704ac9820f54312bd55357'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4d6f3148-3cd8-4b42-99a8-f669c7d72898'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction:/opt/ros/foxy')]), 'shell': False}
+[0.192964] (-) TimerEvent: {}
+[0.297973] (-) TimerEvent: {}
+[0.399052] (-) TimerEvent: {}
+[0.500581] (-) TimerEvent: {}
+[0.602155] (-) TimerEvent: {}
+[0.703324] (-) TimerEvent: {}
+[0.773545] (lab1_introduction) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.803612] (-) TimerEvent: {}
+[0.904945] (-) TimerEvent: {}
+[1.006187] (-) TimerEvent: {}
+[1.110152] (-) TimerEvent: {}
+[1.211872] (-) TimerEvent: {}
+[1.315585] (-) TimerEvent: {}
+[1.419092] (-) TimerEvent: {}
+[1.521301] (-) TimerEvent: {}
+[1.528400] (lab1_introduction) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[1.572277] (lab1_introduction) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.621936] (-) TimerEvent: {}
+[1.723705] (-) TimerEvent: {}
+[1.824766] (-) TimerEvent: {}
+[1.925945] (-) TimerEvent: {}
+[2.027142] (-) TimerEvent: {}
+[2.128309] (-) TimerEvent: {}
+[2.174963] (lab1_introduction) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[2.189941] (lab1_introduction) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.228599] (-) TimerEvent: {}
+[2.330773] (-) TimerEvent: {}
+[2.434761] (-) TimerEvent: {}
+[2.536006] (-) TimerEvent: {}
+[2.639504] (-) TimerEvent: {}
+[2.741845] (-) TimerEvent: {}
+[2.802722] (lab1_introduction) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.842006] (-) TimerEvent: {}
+[2.893886] (lab1_introduction) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.896495] (lab1_introduction) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.922192] (lab1_introduction) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.942305] (-) TimerEvent: {}
+[3.043413] (-) TimerEvent: {}
+[3.144530] (-) TimerEvent: {}
+[3.245528] (-) TimerEvent: {}
+[3.346701] (-) TimerEvent: {}
+[3.447922] (-) TimerEvent: {}
+[3.549485] (-) TimerEvent: {}
+[3.560573] (lab1_introduction) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[3.569292] (lab1_introduction) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.649962] (-) TimerEvent: {}
+[3.752476] (-) TimerEvent: {}
+[3.857634] (-) TimerEvent: {}
+[3.959305] (-) TimerEvent: {}
+[4.062181] (-) TimerEvent: {}
+[4.163461] (-) TimerEvent: {}
+[4.178918] (lab1_introduction) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.262331] (lab1_introduction) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.263473] (-) TimerEvent: {}
+[4.267321] (lab1_introduction) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.292567] (lab1_introduction) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[4.363764] (-) TimerEvent: {}
+[4.464820] (-) TimerEvent: {}
+[4.475156] (lab1_introduction) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[4.476253] (lab1_introduction) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[4.565090] (-) TimerEvent: {}
+[4.666101] (-) TimerEvent: {}
+[4.767096] (-) TimerEvent: {}
+[4.868017] (-) TimerEvent: {}
+[4.969007] (-) TimerEvent: {}
+[5.070042] (-) TimerEvent: {}
+[5.170993] (-) TimerEvent: {}
+[5.271941] (-) TimerEvent: {}
+[5.373189] (-) TimerEvent: {}
+[5.474266] (-) TimerEvent: {}
+[5.575316] (-) TimerEvent: {}
+[5.676475] (-) TimerEvent: {}
+[5.746044] (lab1_introduction) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[5.776735] (-) TimerEvent: {}
+[5.878800] (-) TimerEvent: {}
+[5.941627] (lab1_introduction) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[5.979112] (-) TimerEvent: {}
+[6.080192] (-) TimerEvent: {}
+[6.181293] (-) TimerEvent: {}
+[6.282469] (-) TimerEvent: {}
+[6.344656] (lab1_introduction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.382736] (-) TimerEvent: {}
+[6.402434] (lab1_introduction) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.483167] (-) TimerEvent: {}
+[6.584744] (-) TimerEvent: {}
+[6.685936] (-) TimerEvent: {}
+[6.787049] (-) TimerEvent: {}
+[6.888148] (-) TimerEvent: {}
+[6.990267] (-) TimerEvent: {}
+[7.093248] (-) TimerEvent: {}
+[7.115539] (lab1_introduction) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[7.193538] (-) TimerEvent: {}
+[7.293572] (lab1_introduction) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[7.294645] (-) TimerEvent: {}
+[7.395494] (-) TimerEvent: {}
+[7.497007] (-) TimerEvent: {}
+[7.601080] (-) TimerEvent: {}
+[7.702719] (-) TimerEvent: {}
+[7.804083] (-) TimerEvent: {}
+[7.876327] (lab1_introduction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.904374] (-) TimerEvent: {}
+[8.005534] (-) TimerEvent: {}
+[8.106589] (-) TimerEvent: {}
+[8.207596] (-) TimerEvent: {}
+[8.282583] (lab1_introduction) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[8.294101] (lab1_introduction) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[8.301845] (lab1_introduction) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[8.307847] (-) TimerEvent: {}
+[8.410279] (-) TimerEvent: {}
+[8.511376] (-) TimerEvent: {}
+[8.612576] (-) TimerEvent: {}
+[8.715595] (-) TimerEvent: {}
+[8.816809] (-) TimerEvent: {}
+[8.917920] (-) TimerEvent: {}
+[8.937669] (lab1_introduction) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[8.941176] (lab1_introduction) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[9.018178] (-) TimerEvent: {}
+[9.119222] (-) TimerEvent: {}
+[9.222456] (-) TimerEvent: {}
+[9.323494] (-) TimerEvent: {}
+[9.428005] (-) TimerEvent: {}
+[9.533332] (-) TimerEvent: {}
+[9.558785] (lab1_introduction) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[9.560914] (lab1_introduction) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[9.633836] (-) TimerEvent: {}
+[9.737840] (-) TimerEvent: {}
+[9.838869] (-) TimerEvent: {}
+[9.940004] (-) TimerEvent: {}
+[10.041822] (-) TimerEvent: {}
+[10.049828] (lab1_introduction) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[10.051332] (lab1_introduction) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[10.142055] (-) TimerEvent: {}
+[10.243087] (-) TimerEvent: {}
+[10.344263] (-) TimerEvent: {}
+[10.445570] (-) TimerEvent: {}
+[10.548034] (-) TimerEvent: {}
+[10.633613] (lab1_introduction) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[10.644027] (lab1_introduction) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[10.648241] (-) TimerEvent: {}
+[10.750637] (-) TimerEvent: {}
+[10.852652] (-) TimerEvent: {}
+[10.953832] (-) TimerEvent: {}
+[11.055014] (-) TimerEvent: {}
+[11.156035] (-) TimerEvent: {}
+[11.258450] (-) TimerEvent: {}
+[11.359838] (-) TimerEvent: {}
+[11.461598] (-) TimerEvent: {}
+[11.563157] (-) TimerEvent: {}
+[11.615480] (lab1_introduction) StdoutLine: {'line': b'-- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)\n'}
+[11.663443] (-) TimerEvent: {}
+[11.764422] (-) TimerEvent: {}
+[11.821696] (lab1_introduction) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[11.864685] (-) TimerEvent: {}
+[11.965700] (-) TimerEvent: {}
+[12.066775] (-) TimerEvent: {}
+[12.167915] (-) TimerEvent: {}
+[12.270620] (-) TimerEvent: {}
+[12.372400] (-) TimerEvent: {}
+[12.466531] (lab1_introduction) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[12.472601] (-) TimerEvent: {}
+[12.573586] (-) TimerEvent: {}
+[12.675278] (-) TimerEvent: {}
+[12.778629] (-) TimerEvent: {}
+[12.879903] (-) TimerEvent: {}
+[12.970506] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[12.980040] (-) TimerEvent: {}
+[12.980953] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[12.982279] (lab1_introduction) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/include\n'}
+[12.982982] (lab1_introduction) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[12.993263] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[12.994200] (lab1_introduction) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[12.996807] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[13.002693] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[13.006977] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[13.018149] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[13.019619] (lab1_introduction) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[13.025353] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[13.062202] (lab1_introduction) StdoutLine: {'line': b'-- Configuring done\n'}
+[13.080296] (-) TimerEvent: {}
+[13.181394] (-) TimerEvent: {}
+[13.186893] (lab1_introduction) StdoutLine: {'line': b'-- Generating done\n'}
+[13.239021] (lab1_introduction) StdoutLine: {'line': b'-- Build files have been written to: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction\n'}
+[13.281670] (-) TimerEvent: {}
+[13.293184] (lab1_introduction) CommandEnded: {'returncode': 0}
+[13.298405] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'build'}
+[13.305159] (lab1_introduction) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction', '--', '-j6', '-l6'], 'cwd': '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dawgs_nx'), ('SSH_AGENT_PID', '2075'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/dawgs_nx'), ('OLDPWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1472'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5157'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dawgs_nx'), ('JOURNAL_STREAM', '8:52225'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dawgs_nx'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/dawgs_nx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dawgs:@/tmp/.ICE-unix/2118,unix/dawgs:/tmp/.ICE-unix/2118'), ('INVOCATION_ID', '88be67a2b5704ac9820f54312bd55357'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4d6f3148-3cd8-4b42-99a8-f669c7d72898'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction:/opt/ros/foxy')]), 'shell': False}
+[13.382197] (-) TimerEvent: {}
+[13.484010] (-) TimerEvent: {}
+[13.586775] (-) TimerEvent: {}
+[13.634010] (lab1_introduction) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[13.636884] (lab1_introduction) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target relay\x1b[0m\n'}
+[13.654844] (lab1_introduction) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ackermann_talker\x1b[0m\n'}
+[13.687055] (-) TimerEvent: {}
+[13.788146] (-) TimerEvent: {}
+[13.889951] (-) TimerEvent: {}
+[13.991008] (-) TimerEvent: {}
+[14.092793] (-) TimerEvent: {}
+[14.194683] (-) TimerEvent: {}
+[14.262693] (lab1_introduction) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o\x1b[0m\n'}
+[14.282748] (lab1_introduction) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/relay.dir/src/relay.cpp.o\x1b[0m\n'}
+[14.295292] (-) TimerEvent: {}
+[14.332217] (lab1_introduction) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o\x1b[0m\n'}
+[14.395586] (-) TimerEvent: {}
+[14.497040] (-) TimerEvent: {}
+[14.598054] (-) TimerEvent: {}
+[14.699178] (-) TimerEvent: {}
+[14.801472] (-) TimerEvent: {}
+[14.904693] (-) TimerEvent: {}
+[15.005668] (-) TimerEvent: {}
+[15.106738] (-) TimerEvent: {}
+[15.207998] (-) TimerEvent: {}
+[15.309114] (-) TimerEvent: {}
+[15.411202] (-) TimerEvent: {}
+[15.514927] (-) TimerEvent: {}
+[15.615963] (-) TimerEvent: {}
+[15.716961] (-) TimerEvent: {}
+[15.818107] (-) TimerEvent: {}
+[15.919167] (-) TimerEvent: {}
+[16.020879] (-) TimerEvent: {}
+[16.122066] (-) TimerEvent: {}
+[16.224090] (-) TimerEvent: {}
+[16.325053] (-) TimerEvent: {}
+[16.426144] (-) TimerEvent: {}
+[16.527189] (-) TimerEvent: {}
+[16.628265] (-) TimerEvent: {}
+[16.729374] (-) TimerEvent: {}
+[16.832234] (-) TimerEvent: {}
+[16.933340] (-) TimerEvent: {}
+[17.035045] (-) TimerEvent: {}
+[17.137180] (-) TimerEvent: {}
+[17.239821] (-) TimerEvent: {}
+[17.340849] (-) TimerEvent: {}
+[17.445676] (-) TimerEvent: {}
+[17.548627] (-) TimerEvent: {}
+[17.651426] (-) TimerEvent: {}
+[17.754229] (-) TimerEvent: {}
+[17.855293] (-) TimerEvent: {}
+[17.956582] (-) TimerEvent: {}
+[18.057790] (-) TimerEvent: {}
+[18.159935] (-) TimerEvent: {}
+[18.261683] (-) TimerEvent: {}
+[18.362769] (-) TimerEvent: {}
+[18.463772] (-) TimerEvent: {}
+[18.564757] (-) TimerEvent: {}
+[18.665997] (-) TimerEvent: {}
+[18.767002] (-) TimerEvent: {}
+[18.868141] (-) TimerEvent: {}
+[18.969817] (-) TimerEvent: {}
+[19.072620] (-) TimerEvent: {}
+[19.173624] (-) TimerEvent: {}
+[19.274685] (-) TimerEvent: {}
+[19.375713] (-) TimerEvent: {}
+[19.476751] (-) TimerEvent: {}
+[19.577806] (-) TimerEvent: {}
+[19.679864] (-) TimerEvent: {}
+[19.782406] (-) TimerEvent: {}
+[19.883362] (-) TimerEvent: {}
+[19.984306] (-) TimerEvent: {}
+[20.085263] (-) TimerEvent: {}
+[20.186202] (-) TimerEvent: {}
+[20.287180] (-) TimerEvent: {}
+[20.388196] (-) TimerEvent: {}
+[20.489263] (-) TimerEvent: {}
+[20.590407] (-) TimerEvent: {}
+[20.691477] (-) TimerEvent: {}
+[20.792621] (-) TimerEvent: {}
+[20.894239] (-) TimerEvent: {}
+[20.995770] (-) TimerEvent: {}
+[21.097679] (-) TimerEvent: {}
+[21.199054] (-) TimerEvent: {}
+[21.300113] (-) TimerEvent: {}
+[21.401217] (-) TimerEvent: {}
+[21.502436] (-) TimerEvent: {}
+[21.603432] (-) TimerEvent: {}
+[21.707316] (-) TimerEvent: {}
+[21.808989] (-) TimerEvent: {}
+[21.911050] (-) TimerEvent: {}
+[22.012072] (-) TimerEvent: {}
+[22.114142] (-) TimerEvent: {}
+[22.215297] (-) TimerEvent: {}
+[22.316279] (-) TimerEvent: {}
+[22.417236] (-) TimerEvent: {}
+[22.518291] (-) TimerEvent: {}
+[22.619538] (-) TimerEvent: {}
+[22.721119] (-) TimerEvent: {}
+[22.822355] (-) TimerEvent: {}
+[22.923314] (-) TimerEvent: {}
+[23.025352] (-) TimerEvent: {}
+[23.126929] (-) TimerEvent: {}
+[23.228394] (-) TimerEvent: {}
+[23.331362] (-) TimerEvent: {}
+[23.432450] (-) TimerEvent: {}
+[23.534388] (-) TimerEvent: {}
+[23.635556] (-) TimerEvent: {}
+[23.736565] (-) TimerEvent: {}
+[23.837611] (-) TimerEvent: {}
+[23.939257] (-) TimerEvent: {}
+[23.949071] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KTalker::Talker()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[23.952995] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:17:99:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdrive_topic\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[23.954163] (lab1_introduction) StderrLine: {'line': b'   17 |         ackermann_publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>(\x1b[01;31m\x1b[Kdrive_topic\x1b[m\x1b[K, 10);\n'}
+[23.954881] (lab1_introduction) StderrLine: {'line': b'      |                                                                                                   \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[23.956988] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Talker::publish_ackermann_topic()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[23.960134] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:32:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAckermann_msgs\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[23.960909] (lab1_introduction) StderrLine: {'line': b'   32 |         \x1b[01;31m\x1b[KAckermann_msgs\x1b[m\x1b[K::msg::AckermannDriveStamped ackermann_msgs;\n'}
+[23.961529] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[23.971375] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:38:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K.\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[23.972289] (lab1_introduction) StderrLine: {'line': b'   38 |         ackermann_msgs\x1b[01;31m\x1b[K.\x1b[m\x1b[Kdrive.speed = speed;\n'}
+[23.972937] (lab1_introduction) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[23.973915] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:39:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K.\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[23.974446] (lab1_introduction) StderrLine: {'line': b'   39 |         ackermann_msgs\x1b[01;31m\x1b[K.\x1b[m\x1b[Kdrive.steering_angle = steering_angle;\n'}
+[23.974875] (lab1_introduction) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[23.975337] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:41:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[23.975777] (lab1_introduction) StderrLine: {'line': b'   41 |         ackermann_publisher_->publish(ackermann_msgs\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[23.976236] (lab1_introduction) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[24.039446] (-) TimerEvent: {}
+[24.142223] (-) TimerEvent: {}
+[24.243924] (-) TimerEvent: {}
+[24.254497] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:7:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected class-name before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[24.255373] (lab1_introduction) StderrLine: {'line': b'    7 | \x1b[01;31m\x1b[K{\x1b[m\x1b[K\n'}
+[24.255896] (lab1_introduction) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[24.256742] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:23:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Krclcpp\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.257287] (lab1_introduction) StderrLine: {'line': b'   23 |     \x1b[01;31m\x1b[Krclcpp\x1b[m\x1b[K::Publisher<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr relay_publisher_;\n'}
+[24.257824] (lab1_introduction) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[24.258259] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KRelay::Relay()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[24.258662] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:9:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[KRelay\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[KNode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.259195] (lab1_introduction) StderrLine: {'line': b'    9 |     Relay(): \x1b[01;31m\x1b[KNode\x1b[m\x1b[K("relay")\n'}
+[24.259626] (lab1_introduction) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[24.270355] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kackermann_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[24.271647] (lab1_introduction) StderrLine: {'line': b'   14 |         \x1b[01;31m\x1b[Kackermann_publisher_\x1b[m\x1b[K = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>(drive_topic, 10);\n'}
+[24.272221] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.272702] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Relay\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kcreate_publisher\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.273155] (lab1_introduction) StderrLine: {'line': b'   14 |         ackermann_publisher_ = this->\x1b[01;31m\x1b[Kcreate_publisher\x1b[m\x1b[K<ackermann_msgs::msg::AckermannDriveStamped>(drive_topic, 10);\n'}
+[24.273822] (lab1_introduction) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.274479] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:97:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[24.275022] (lab1_introduction) StderrLine: {'line': b'   14 | publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped\x1b[01;31m\x1b[K>\x1b[m\x1b[K(drive_topic, 10);\n'}
+[24.275471] (lab1_introduction) StderrLine: {'line': b'      |                                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[24.275902] (lab1_introduction) StderrLine: {'line': b'\n'}
+[24.276304] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:99:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[24.276735] (lab1_introduction) StderrLine: {'line': b'   14 | ublisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>(\x1b[01;35m\x1b[Kdrive_topic\x1b[m\x1b[K, 10);\n'}
+[24.277203] (lab1_introduction) StderrLine: {'line': b'      |                                                                                \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.277630] (lab1_introduction) StderrLine: {'line': b'\n'}
+[24.288049] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kackermann_subscriber_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[24.289485] (lab1_introduction) StderrLine: {'line': b'   15 |         \x1b[01;31m\x1b[Kackermann_subscriber_\x1b[m\x1b[K = this->create_subscription<ackermann_msgs::msg::AckermannDriveStamped>(drive_relay_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));\n'}
+[24.290826] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.291467] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Relay\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kcreate_subscription\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.291957] (lab1_introduction) StderrLine: {'line': b'   15 |         ackermann_subscriber_ = this->\x1b[01;31m\x1b[Kcreate_subscription\x1b[m\x1b[K<ackermann_msgs::msg::AckermannDriveStamped>(drive_relay_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));\n'}
+[24.292832] (lab1_introduction) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.293697] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:101:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[24.296651] (lab1_introduction) StderrLine: {'line': b'   15 | criber_ = this->create_subscription<ackermann_msgs::msg::AckermannDriveStamped\x1b[01;31m\x1b[K>\x1b[m\x1b[K(drive_relay_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));\n'}
+[24.297809] (lab1_introduction) StderrLine: {'line': b'      |                                                                               \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[24.298351] (lab1_introduction) StderrLine: {'line': b'\n'}
+[24.298746] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:103:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kleft operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[24.299160] (lab1_introduction) StderrLine: {'line': b'   15 | iber_ = this->create_subscription<ackermann_msgs::msg::AckermannDriveStamped>(\x1b[01;35m\x1b[Kdrive_relay_topic\x1b[m\x1b[K, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));\n'}
+[24.299625] (lab1_introduction) StderrLine: {'line': b'      |                                                                               \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.300018] (lab1_introduction) StderrLine: {'line': b'\n'}
+[24.344188] (-) TimerEvent: {}
+[24.345289] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:191:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kright operand of comma operator has no effect [\x1b[01;35m\x1b[K-Wunused-value\x1b[m\x1b[K]\n'}
+[24.346127] (lab1_introduction) StderrLine: {'line': b'   15 | y_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1\x1b[01;35m\x1b[K)\x1b[m\x1b[K);\n'}
+[24.346798] (lab1_introduction) StderrLine: {'line': b'      |                                                                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[24.347332] (lab1_introduction) StderrLine: {'line': b'\n'}
+[24.348167] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Relay::ackermann_callback(ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> >::ConstSharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[24.349431] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:29:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst ConstSharedPtr\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kdrive\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.349987] (lab1_introduction) StderrLine: {'line': b'   29 |         double speed_new = ackermann_msg.\x1b[01;31m\x1b[Kdrive\x1b[m\x1b[K.speed * 3;\n'}
+[24.350430] (lab1_introduction) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[24.350824] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:30:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst ConstSharedPtr\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kdrive\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.351319] (lab1_introduction) StderrLine: {'line': b'   30 |         double steering_angle_new = ackermann_msg.\x1b[01;31m\x1b[Kdrive\x1b[m\x1b[K.steering_angle * 3;\n'}
+[24.351703] (lab1_introduction) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[24.352094] (lab1_introduction) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/service.hpp:34\x1b[m\x1b[K,\n'}
+[24.352465] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25\x1b[m\x1b[K,\n'}
+[24.352883] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[24.353352] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[24.354194] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[24.354650] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[24.355051] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[24.355534] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[24.355924] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[24.356330] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[24.356700] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:1\x1b[m\x1b[K:\n'}
+[24.357075] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Relay\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.358008] (lab1_introduction) StderrLine: {'line': b'   31 |         RCLCPP_INFO_THROTTLE(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.358560] (lab1_introduction) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.359015] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Relay\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.359506] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[24.360157] (lab1_introduction) StderrLine: {'line': b'   31 |         \x1b[01;31m\x1b[KRCLCPP_INFO_THROTTLE\x1b[m\x1b[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.360634] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.361047] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[24.361429] (lab1_introduction) StderrLine: {'line': b'   31 |         \x1b[01;31m\x1b[KRCLCPP_INFO_THROTTLE\x1b[m\x1b[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.361928] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.362359] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[24.362753] (lab1_introduction) StderrLine: {'line': b'   31 |         \x1b[01;31m\x1b[KRCLCPP_INFO_THROTTLE\x1b[m\x1b[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.363144] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.363525] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Relay\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_clock\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.363957] (lab1_introduction) StderrLine: {'line': b'   31 |         RCLCPP_INFO_THROTTLE(this->get_logger(), *this->\x1b[01;31m\x1b[Kget_clock\x1b[m\x1b[K(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.364349] (lab1_introduction) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[24.364751] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[24.365151] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kc\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[24.365547] (lab1_introduction) StderrLine: {'line': b'   31 |         \x1b[01;31m\x1b[KRCLCPP_INFO_THROTTLE\x1b[m\x1b[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.367259] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.368140] (lab1_introduction) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[24.368677] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[24.369069] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[24.369466] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[24.369993] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[24.370437] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[24.370826] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[24.371298] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[24.371701] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[24.372089] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[24.372514] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:1\x1b[m\x1b[K:\n'}
+[24.372908] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Relay::ackermann_callback(ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> >::ConstSharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[24.373320] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Relay\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.373888] (lab1_introduction) StderrLine: {'line': b'   31 |         RCLCPP_INFO_THROTTLE(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.374473] (lab1_introduction) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.375124] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass Relay\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.375570] (lab1_introduction) StderrLine: {'line': b'   31 |         RCLCPP_INFO_THROTTLE(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);\n'}
+[24.376055] (lab1_introduction) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.376481] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:36:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krelay_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcl_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[24.376899] (lab1_introduction) StderrLine: {'line': b'   36 |         \x1b[01;31m\x1b[Krelay_publisher_\x1b[m\x1b[K->publish(drive_relay_msg);\n'}
+[24.377291] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[24.377841] (lab1_introduction) StderrLine: {'line': b'      |         \x1b[32m\x1b[Krcl_publisher_t\x1b[m\x1b[K\n'}
+[24.390026] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[24.391207] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:43:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kspin(std::shared_ptr<Relay>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.391665] (lab1_introduction) StderrLine: {'line': b'   43 |     rclcpp::spin(std::make_shared<Relay>()\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[24.392061] (lab1_introduction) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[24.392446] (lab1_introduction) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[24.392824] (lab1_introduction) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:1\x1b[m\x1b[K:\n'}
+[24.393215] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.393619] (lab1_introduction) StderrLine: {'line': b'   45 | \x1b[01;36m\x1b[Kspin\x1b[m\x1b[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);\n'}
+[24.398106] (lab1_introduction) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[24.399958] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:60:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[KRelay\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[Krclcpp::node_interfaces::NodeBaseInterface\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.400669] (lab1_introduction) StderrLine: {'line': b'   45 | spin(\x1b[01;36m\x1b[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr\x1b[m\x1b[K);\n'}
+[24.401177] (lab1_introduction) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[24.401830] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.402337] (lab1_introduction) StderrLine: {'line': b'   49 | \x1b[01;36m\x1b[Kspin\x1b[m\x1b[K(rclcpp::Node::SharedPtr node_ptr);\n'}
+[24.402781] (lab1_introduction) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[24.403226] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[KRelay\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kshared_ptr<\x1b[01;32m\x1b[Krclcpp::Node\x1b[m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[24.404030] (lab1_introduction) StderrLine: {'line': b'   49 | spin(\x1b[01;36m\x1b[Krclcpp::Node::SharedPtr node_ptr\x1b[m\x1b[K);\n'}
+[24.404527] (lab1_introduction) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[24.444553] (-) TimerEvent: {}
+[24.545523] (-) TimerEvent: {}
+[24.646700] (-) TimerEvent: {}
+[24.747763] (-) TimerEvent: {}
+[24.848737] (-) TimerEvent: {}
+[24.950062] (-) TimerEvent: {}
+[25.051459] (-) TimerEvent: {}
+[25.153947] (-) TimerEvent: {}
+[25.255112] (-) TimerEvent: {}
+[25.357522] (-) TimerEvent: {}
+[25.464905] (-) TimerEvent: {}
+[25.567682] (-) TimerEvent: {}
+[25.673631] (-) TimerEvent: {}
+[25.778529] (-) TimerEvent: {}
+[25.880306] (-) TimerEvent: {}
+[25.981526] (-) TimerEvent: {}
+[26.084233] (-) TimerEvent: {}
+[26.185402] (-) TimerEvent: {}
+[26.286664] (-) TimerEvent: {}
+[26.389961] (-) TimerEvent: {}
+[26.492904] (-) TimerEvent: {}
+[26.594202] (-) TimerEvent: {}
+[26.673291] (lab1_introduction) StderrLine: {'line': b'make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1\n'}
+[26.674731] (lab1_introduction) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/talker.dir/all] Error 2\n'}
+[26.675260] (lab1_introduction) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[26.694437] (-) TimerEvent: {}
+[26.796395] (-) TimerEvent: {}
+[26.859912] (lab1_introduction) StderrLine: {'line': b'make[2]: *** [CMakeFiles/relay.dir/build.make:63: CMakeFiles/relay.dir/src/relay.cpp.o] Error 1\n'}
+[26.860954] (lab1_introduction) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/relay.dir/all] Error 2\n'}
+[26.897276] (-) TimerEvent: {}
+[26.998767] (-) TimerEvent: {}
+[27.099683] (-) TimerEvent: {}
+[27.200623] (-) TimerEvent: {}
+[27.301849] (-) TimerEvent: {}
+[27.403655] (-) TimerEvent: {}
+[27.504669] (-) TimerEvent: {}
+[27.606234] (-) TimerEvent: {}
+[27.707356] (-) TimerEvent: {}
+[27.808299] (-) TimerEvent: {}
+[27.909316] (-) TimerEvent: {}
+[28.010361] (-) TimerEvent: {}
+[28.111451] (-) TimerEvent: {}
+[28.212474] (-) TimerEvent: {}
+[28.313498] (-) TimerEvent: {}
+[28.414740] (-) TimerEvent: {}
+[28.516648] (-) TimerEvent: {}
+[28.617943] (-) TimerEvent: {}
+[28.719128] (-) TimerEvent: {}
+[28.820078] (-) TimerEvent: {}
+[28.921466] (-) TimerEvent: {}
+[29.023024] (-) TimerEvent: {}
+[29.124114] (-) TimerEvent: {}
+[29.225608] (-) TimerEvent: {}
+[29.328009] (-) TimerEvent: {}
+[29.429028] (-) TimerEvent: {}
+[29.530063] (-) TimerEvent: {}
+[29.631226] (-) TimerEvent: {}
+[29.732348] (-) TimerEvent: {}
+[29.834165] (-) TimerEvent: {}
+[29.935193] (-) TimerEvent: {}
+[30.037436] (-) TimerEvent: {}
+[30.141149] (-) TimerEvent: {}
+[30.243063] (-) TimerEvent: {}
+[30.344257] (-) TimerEvent: {}
+[30.445311] (-) TimerEvent: {}
+[30.546531] (-) TimerEvent: {}
+[30.647585] (-) TimerEvent: {}
+[30.749469] (-) TimerEvent: {}
+[30.850689] (-) TimerEvent: {}
+[30.952519] (-) TimerEvent: {}
+[31.053479] (-) TimerEvent: {}
+[31.154581] (-) TimerEvent: {}
+[31.255579] (-) TimerEvent: {}
+[31.356649] (-) TimerEvent: {}
+[31.457679] (-) TimerEvent: {}
+[31.558784] (-) TimerEvent: {}
+[31.659742] (-) TimerEvent: {}
+[31.761610] (-) TimerEvent: {}
+[31.862831] (-) TimerEvent: {}
+[31.963982] (-) TimerEvent: {}
+[32.065142] (-) TimerEvent: {}
+[32.168778] (-) TimerEvent: {}
+[32.270502] (-) TimerEvent: {}
+[32.371697] (-) TimerEvent: {}
+[32.474574] (-) TimerEvent: {}
+[32.575632] (-) TimerEvent: {}
+[32.676798] (-) TimerEvent: {}
+[32.778460] (-) TimerEvent: {}
+[32.879611] (-) TimerEvent: {}
+[32.980662] (-) TimerEvent: {}
+[33.081629] (-) TimerEvent: {}
+[33.182782] (-) TimerEvent: {}
+[33.283838] (-) TimerEvent: {}
+[33.385120] (-) TimerEvent: {}
+[33.486361] (-) TimerEvent: {}
+[33.587404] (-) TimerEvent: {}
+[33.690126] (-) TimerEvent: {}
+[33.792184] (-) TimerEvent: {}
+[33.893534] (-) TimerEvent: {}
+[33.995376] (-) TimerEvent: {}
+[34.096369] (-) TimerEvent: {}
+[34.197454] (-) TimerEvent: {}
+[34.298666] (-) TimerEvent: {}
+[34.399773] (-) TimerEvent: {}
+[34.501007] (-) TimerEvent: {}
+[34.602775] (-) TimerEvent: {}
+[34.703922] (-) TimerEvent: {}
+[34.805090] (-) TimerEvent: {}
+[34.906268] (-) TimerEvent: {}
+[35.007537] (-) TimerEvent: {}
+[35.108413] (-) TimerEvent: {}
+[35.209448] (-) TimerEvent: {}
+[35.311055] (-) TimerEvent: {}
+[35.412201] (-) TimerEvent: {}
+[35.513815] (-) TimerEvent: {}
+[35.616973] (-) TimerEvent: {}
+[35.718550] (-) TimerEvent: {}
+[35.820853] (-) TimerEvent: {}
+[35.921937] (-) TimerEvent: {}
+[36.022979] (-) TimerEvent: {}
+[36.124590] (-) TimerEvent: {}
+[36.225817] (-) TimerEvent: {}
+[36.328684] (-) TimerEvent: {}
+[36.429694] (-) TimerEvent: {}
+[36.530814] (-) TimerEvent: {}
+[36.631772] (-) TimerEvent: {}
+[36.732831] (-) TimerEvent: {}
+[36.838239] (-) TimerEvent: {}
+[36.943538] (-) TimerEvent: {}
+[37.044545] (-) TimerEvent: {}
+[37.145639] (-) TimerEvent: {}
+[37.246892] (-) TimerEvent: {}
+[37.347999] (-) TimerEvent: {}
+[37.452688] (-) TimerEvent: {}
+[37.554797] (-) TimerEvent: {}
+[37.658892] (-) TimerEvent: {}
+[37.760063] (-) TimerEvent: {}
+[37.861259] (-) TimerEvent: {}
+[37.962533] (-) TimerEvent: {}
+[38.066700] (-) TimerEvent: {}
+[38.168625] (-) TimerEvent: {}
+[38.271471] (-) TimerEvent: {}
+[38.372388] (-) TimerEvent: {}
+[38.473338] (-) TimerEvent: {}
+[38.574310] (-) TimerEvent: {}
+[38.675419] (-) TimerEvent: {}
+[38.776476] (-) TimerEvent: {}
+[38.878178] (-) TimerEvent: {}
+[38.979142] (-) TimerEvent: {}
+[39.080165] (-) TimerEvent: {}
+[39.182118] (-) TimerEvent: {}
+[39.283122] (-) TimerEvent: {}
+[39.384174] (-) TimerEvent: {}
+[39.485214] (-) TimerEvent: {}
+[39.586349] (-) TimerEvent: {}
+[39.687463] (-) TimerEvent: {}
+[39.788500] (-) TimerEvent: {}
+[39.889504] (-) TimerEvent: {}
+[39.990603] (-) TimerEvent: {}
+[40.091611] (-) TimerEvent: {}
+[40.193314] (-) TimerEvent: {}
+[40.296061] (-) TimerEvent: {}
+[40.397634] (-) TimerEvent: {}
+[40.502731] (-) TimerEvent: {}
+[40.603855] (-) TimerEvent: {}
+[40.704980] (-) TimerEvent: {}
+[40.806117] (-) TimerEvent: {}
+[40.907179] (-) TimerEvent: {}
+[41.008318] (-) TimerEvent: {}
+[41.109502] (-) TimerEvent: {}
+[41.210760] (-) TimerEvent: {}
+[41.312266] (-) TimerEvent: {}
+[41.413472] (-) TimerEvent: {}
+[41.514740] (-) TimerEvent: {}
+[41.616119] (-) TimerEvent: {}
+[41.717841] (-) TimerEvent: {}
+[41.819032] (-) TimerEvent: {}
+[41.920133] (-) TimerEvent: {}
+[42.021317] (-) TimerEvent: {}
+[42.122595] (-) TimerEvent: {}
+[42.223934] (-) TimerEvent: {}
+[42.325148] (-) TimerEvent: {}
+[42.426361] (-) TimerEvent: {}
+[42.527387] (-) TimerEvent: {}
+[42.628399] (-) TimerEvent: {}
+[42.729519] (-) TimerEvent: {}
+[42.830651] (-) TimerEvent: {}
+[42.931698] (-) TimerEvent: {}
+[43.032730] (-) TimerEvent: {}
+[43.133802] (-) TimerEvent: {}
+[43.234893] (-) TimerEvent: {}
+[43.335943] (-) TimerEvent: {}
+[43.437073] (-) TimerEvent: {}
+[43.538399] (-) TimerEvent: {}
+[43.639561] (-) TimerEvent: {}
+[43.740822] (-) TimerEvent: {}
+[43.842703] (-) TimerEvent: {}
+[43.943774] (-) TimerEvent: {}
+[44.045126] (-) TimerEvent: {}
+[44.147064] (-) TimerEvent: {}
+[44.249085] (-) TimerEvent: {}
+[44.351007] (-) TimerEvent: {}
+[44.452014] (-) TimerEvent: {}
+[44.553655] (-) TimerEvent: {}
+[44.655127] (-) TimerEvent: {}
+[44.756093] (-) TimerEvent: {}
+[44.859578] (-) TimerEvent: {}
+[44.961108] (-) TimerEvent: {}
+[45.062240] (-) TimerEvent: {}
+[45.163757] (-) TimerEvent: {}
+[45.264727] (-) TimerEvent: {}
+[45.365920] (-) TimerEvent: {}
+[45.466996] (-) TimerEvent: {}
+[45.567955] (-) TimerEvent: {}
+[45.669064] (-) TimerEvent: {}
+[45.770131] (-) TimerEvent: {}
+[45.872024] (-) TimerEvent: {}
+[45.974149] (lab1_introduction) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable ackermann_talker\x1b[0m\n'}
+[45.976709] (-) TimerEvent: {}
+[46.081891] (-) TimerEvent: {}
+[46.182916] (-) TimerEvent: {}
+[46.283970] (-) TimerEvent: {}
+[46.384884] (-) TimerEvent: {}
+[46.485978] (-) TimerEvent: {}
+[46.587138] (-) TimerEvent: {}
+[46.688877] (-) TimerEvent: {}
+[46.789995] (-) TimerEvent: {}
+[46.891152] (-) TimerEvent: {}
+[46.992316] (-) TimerEvent: {}
+[47.093482] (-) TimerEvent: {}
+[47.194683] (-) TimerEvent: {}
+[47.295772] (-) TimerEvent: {}
+[47.396863] (-) TimerEvent: {}
+[47.500048] (-) TimerEvent: {}
+[47.574137] (lab1_introduction) StdoutLine: {'line': b'[ 66%] Built target ackermann_talker\n'}
+[47.579499] (lab1_introduction) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[47.593183] (lab1_introduction) CommandEnded: {'returncode': 2}
+[47.602285] (-) TimerEvent: {}
+[47.688855] (lab1_introduction) JobEnded: {'identifier': 'lab1_introduction', 'rc': 2}
+[47.701243] (-) EventReactorShutdown: {}

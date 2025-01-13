@@ -1,0 +1,208 @@
+[0.105s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction
+[0.782s] -- The C compiler identification is GNU 9.4.0
+[1.528s] -- The CXX compiler identification is GNU 9.4.0
+[1.572s] -- Check for working C compiler: /usr/bin/cc
+[2.175s] -- Check for working C compiler: /usr/bin/cc -- works
+[2.189s] -- Detecting C compiler ABI info
+[2.802s] -- Detecting C compiler ABI info - done
+[2.893s] -- Detecting C compile features
+[2.896s] -- Detecting C compile features - done
+[2.922s] -- Check for working CXX compiler: /usr/bin/c++
+[3.560s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[3.569s] -- Detecting CXX compiler ABI info
+[4.178s] -- Detecting CXX compiler ABI info - done
+[4.262s] -- Detecting CXX compile features
+[4.267s] -- Detecting CXX compile features - done
+[4.292s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[4.475s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[4.476s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[5.745s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.941s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[6.344s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.402s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[7.115s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[7.293s] -- Found FastRTPS: /opt/ros/foxy/include  
+[7.876s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.282s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[8.293s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.301s] -- Looking for pthread.h
+[8.937s] -- Looking for pthread.h - found
+[8.941s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[9.558s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[9.560s] -- Looking for pthread_create in pthreads
+[10.050s] -- Looking for pthread_create in pthreads - not found
+[10.051s] -- Looking for pthread_create in pthread
+[10.633s] -- Looking for pthread_create in pthread - found
+[10.643s] -- Found Threads: TRUE  
+[11.615s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[11.821s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[12.466s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[12.970s] -- Added test 'copyright' to check source files copyright and LICENSE
+[12.980s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[12.982s] -- Configured cppcheck include dirs: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/include
+[12.982s] -- Configured cppcheck exclude dirs and/or files: 
+[12.993s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[12.993s] -- Configured cpplint exclude dirs and/or files: 
+[12.996s] -- Added test 'flake8' to check Python code syntax and style conventions
+[13.002s] -- Added test 'lint_cmake' to check CMake code style
+[13.006s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[13.018s] -- Added test 'uncrustify' to check C / C++ code style
+[13.019s] -- Configured uncrustify additional arguments: 
+[13.025s] -- Added test 'xmllint' to check XML markup files
+[13.062s] -- Configuring done
+[13.186s] -- Generating done
+[13.239s] -- Build files have been written to: /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction
+[13.294s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/install/lab1_introduction
+[13.312s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction -- -j6 -l6
+[13.635s] [35m[1mScanning dependencies of target talker[0m
+[13.636s] [35m[1mScanning dependencies of target relay[0m
+[13.654s] [35m[1mScanning dependencies of target ackermann_talker[0m
+[14.262s] [ 16%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[14.283s] [ 33%] [32mBuilding CXX object CMakeFiles/relay.dir/src/relay.cpp.o[0m
+[14.332s] [ 50%] [32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o[0m
+[23.951s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[23.953s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:17:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kdrive_topic[m[K’ was not declared in this scope
+[23.954s]    17 |         ackermann_publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>([01;31m[Kdrive_topic[m[K, 10);
+[23.955s]       |                                                                                                   [01;31m[K^~~~~~~~~~~[m[K
+[23.958s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In member function ‘[01m[Kvoid Talker::publish_ackermann_topic()[m[K’:
+[23.959s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[KAckermann_msgs[m[K’ has not been declared
+[23.960s]    32 |         [01;31m[KAckermann_msgs[m[K::msg::AckermannDriveStamped ackermann_msgs;
+[23.961s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[23.971s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+[23.972s]    38 |         ackermann_msgs[01;31m[K.[m[Kdrive.speed = speed;
+[23.972s]       |                       [01;31m[K^[m[K
+[23.973s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:39:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K.[m[K’ token
+[23.974s]    39 |         ackermann_msgs[01;31m[K.[m[Kdrive.steering_angle = steering_angle;
+[23.974s]       |                       [01;31m[K^[m[K
+[23.974s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:41:53:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[23.975s]    41 |         ackermann_publisher_->publish(ackermann_msgs[01;31m[K)[m[K;
+[23.975s]       |                                                     [01;31m[K^[m[K
+[24.254s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:7:1:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+[24.255s]     7 | [01;31m[K{[m[K
+[24.255s]       | [01;31m[K^[m[K
+[24.256s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:23:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Krclcpp[m[K’
+[24.256s]    23 |     [01;31m[Krclcpp[m[K::Publisher<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr relay_publisher_;
+[24.257s]       |     [01;31m[K^~~~~~[m[K
+[24.257s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In constructor ‘[01m[KRelay::Relay()[m[K’:
+[24.258s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:9:14:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRelay[m[K’ does not have any field named ‘[01m[KNode[m[K’
+[24.258s]     9 |     Relay(): [01;31m[KNode[m[K("relay")
+[24.259s]       |              [01;31m[K^~~~[m[K
+[24.270s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kackermann_publisher_[m[K’ was not declared in this scope
+[24.271s]    14 |         [01;31m[Kackermann_publisher_[m[K = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>(drive_topic, 10);
+[24.271s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[24.272s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Relay[m[K’ has no member named ‘[01m[Kcreate_publisher[m[K’
+[24.272s]    14 |         ackermann_publisher_ = this->[01;31m[Kcreate_publisher[m[K<ackermann_msgs::msg::AckermannDriveStamped>(drive_topic, 10);
+[24.273s]       |                                      [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[24.274s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:97:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[24.274s]    14 | publisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped[01;31m[K>[m[K(drive_topic, 10);
+[24.275s]       |                                                                               [01;31m[K^[m[K
+[24.275s] 
+[24.275s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:14:99:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[24.276s]    14 | ublisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>([01;35m[Kdrive_topic[m[K, 10);
+[24.276s]       |                                                                                [01;35m[K^~~~~~~~~~~[m[K
+[24.277s] 
+[24.288s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kackermann_subscriber_[m[K’ was not declared in this scope
+[24.289s]    15 |         [01;31m[Kackermann_subscriber_[m[K = this->create_subscription<ackermann_msgs::msg::AckermannDriveStamped>(drive_relay_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));
+[24.290s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[24.291s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Relay[m[K’ has no member named ‘[01m[Kcreate_subscription[m[K’
+[24.291s]    15 |         ackermann_subscriber_ = this->[01;31m[Kcreate_subscription[m[K<ackermann_msgs::msg::AckermannDriveStamped>(drive_relay_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));
+[24.292s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[24.293s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:101:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[24.296s]    15 | criber_ = this->create_subscription<ackermann_msgs::msg::AckermannDriveStamped[01;31m[K>[m[K(drive_relay_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));
+[24.297s]       |                                                                               [01;31m[K^[m[K
+[24.297s] 
+[24.298s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:103:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[24.298s]    15 | iber_ = this->create_subscription<ackermann_msgs::msg::AckermannDriveStamped>([01;35m[Kdrive_relay_topic[m[K, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1));
+[24.299s]       |                                                                               [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[24.299s] 
+[24.345s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:15:191:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[24.345s]    15 | y_topic, 10, std::bind(&Relay::ackermann_callback, this, std::placeholders::_1[01;35m[K)[m[K);
+[24.346s]       |                                                                               [01;35m[K^[m[K
+[24.346s] 
+[24.348s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In member function ‘[01m[Kvoid Relay::ackermann_callback(ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[24.349s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:29:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstSharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdrive[m[K’
+[24.349s]    29 |         double speed_new = ackermann_msg.[01;31m[Kdrive[m[K.speed * 3;
+[24.350s]       |                                          [01;31m[K^~~~~[m[K
+[24.350s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:30:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstSharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<const ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdrive[m[K’
+[24.350s]    30 |         double steering_angle_new = ackermann_msg.[01;31m[Kdrive[m[K.steering_angle * 3;
+[24.351s]       |                                                   [01;31m[K^~~~~[m[K
+[24.351s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/service.hpp:34[m[K,
+[24.352s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25[m[K,
+[24.352s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[24.353s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[24.353s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[24.354s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[24.354s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[24.355s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[24.355s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[24.355s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[24.356s]                  from [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:1[m[K:
+[24.357s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Relay[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[24.357s]    31 |         RCLCPP_INFO_THROTTLE(this->[01;31m[Kget_logger[m[K(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.358s]       |                                    [01;31m[K^~~~~~~~~~[m[K
+[24.358s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Relay[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[24.359s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[24.359s]    31 |         [01;31m[KRCLCPP_INFO_THROTTLE[m[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.360s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[24.360s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[24.361s]    31 |         [01;31m[KRCLCPP_INFO_THROTTLE[m[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.361s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[24.361s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[24.362s]    31 |         [01;31m[KRCLCPP_INFO_THROTTLE[m[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.362s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[24.363s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Relay[m[K’ has no member named ‘[01m[Kget_clock[m[K’
+[24.363s]    31 |         RCLCPP_INFO_THROTTLE(this->get_logger(), *this->[01;31m[Kget_clock[m[K(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.363s]       |                                                         [01;31m[K^~~~~~~~~[m[K
+[24.364s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In lambda function:
+[24.364s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kc[m[K’ was not declared in this scope
+[24.366s]    31 |         [01;31m[KRCLCPP_INFO_THROTTLE[m[K(this->get_logger(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.367s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[24.367s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[24.368s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[24.368s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[24.369s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[24.369s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[24.370s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[24.370s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[24.370s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[24.371s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[24.371s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[24.372s]                  from [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:1[m[K:
+[24.372s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In member function ‘[01m[Kvoid Relay::ackermann_callback(ackermann_msgs::msg::AckermannDriveStamped_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[24.372s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Relay[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[24.373s]    31 |         RCLCPP_INFO_THROTTLE(this->[01;31m[Kget_logger[m[K(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.374s]       |                                    [01;31m[K^~~~~~~~~~[m[K
+[24.374s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:31:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Relay[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[24.375s]    31 |         RCLCPP_INFO_THROTTLE(this->[01;31m[Kget_logger[m[K(), *this->get_clock(), 1300, "Relay msg v: %.2lf, d: %.2lf", speed_new, steering_angle_new);
+[24.375s]       |                                    [01;31m[K^~~~~~~~~~[m[K
+[24.376s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:36:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krelay_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[24.376s]    36 |         [01;31m[Krelay_publisher_[m[K->publish(drive_relay_msg);
+[24.376s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[24.377s]       |         [32m[Krcl_publisher_t[m[K
+[24.390s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[24.390s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:43:43:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(std::shared_ptr<Relay>)[m[K’
+[24.391s]    43 |     rclcpp::spin(std::make_shared<Relay>()[01;31m[K)[m[K;
+[24.391s]       |                                           [01;31m[K^[m[K
+[24.392s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[24.392s]                  from [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/relay.cpp:1[m[K:
+[24.392s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+[24.395s]    45 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[24.397s]       | [01;36m[K^~~~[m[K
+[24.399s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KRelay[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::node_interfaces::NodeBaseInterface[m[K>[m[K’
+[24.400s]    45 | spin([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K);
+[24.400s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[24.401s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)[m[K’
+[24.401s]    49 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+[24.402s]       | [01;36m[K^~~~[m[K
+[24.402s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KRelay[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::Node[m[K>[m[K’
+[24.403s]    49 | spin([01;36m[Krclcpp::Node::SharedPtr node_ptr[m[K);
+[24.405s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[26.673s] make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+[26.674s] make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/talker.dir/all] Error 2
+[26.674s] make[1]: *** Waiting for unfinished jobs....
+[26.859s] make[2]: *** [CMakeFiles/relay.dir/build.make:63: CMakeFiles/relay.dir/src/relay.cpp.o] Error 1
+[26.860s] make[1]: *** [CMakeFiles/Makefile2:82: CMakeFiles/relay.dir/all] Error 2
+[45.975s] [ 66%] [32m[1mLinking CXX executable ackermann_talker[0m
+[47.574s] [ 66%] Built target ackermann_talker
+[47.579s] make: *** [Makefile:141: all] Error 2
+[47.594s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction -- -j6 -l6

@@ -1,0 +1,7 @@
+[35m[1mScanning dependencies of target relay[0m
+[35m[1mScanning dependencies of target talker[0m
+[ 33%] Built target ackermann_talker
+[ 50%] [32mBuilding CXX object CMakeFiles/relay.dir/src/relay.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable relay[0m
+[ 83%] Built target relay

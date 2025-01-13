@@ -1,0 +1,14 @@
+[0.115s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction -- -j6 -l6
+[0.521s] [35m[1mScanning dependencies of target talker[0m
+[0.676s] [ 33%] Built target relay
+[0.684s] [ 66%] Built target ackermann_talker
+[0.842s] [ 83%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[8.422s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[8.423s] [01m[K/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction/src/talker.cpp:21:99:[m[K [01;31m[Kerror: [m[K‘[01m[Kdrive_topic[m[K’ was not declared in this scope
+[8.423s]    21 | ublisher_ = this->create_publisher<ackermann_msgs::msg::AckermannDriveStamped>([01;31m[Kdrive_topic[m[K, 10);
+[8.424s]       |                                                                                [01;31m[K^~~~~~~~~~~[m[K
+[8.424s] 
+[11.503s] make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+[11.504s] make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/talker.dir/all] Error 2
+[11.507s] make: *** [Makefile:141: all] Error 2
+[11.522s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction -- -j6 -l6

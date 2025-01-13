@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction
+CMAKE_SOURCE_DIR = /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/src/lab1_introduction
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction
+CMAKE_BINARY_DIR = /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/CMakeFiles /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawgs_nx/dawgs_f1tenth/labs_f1tenth/lab1/build/lab1_introduction/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named relay
+
+# Build rule for target.
+relay: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 relay
+.PHONY : relay
+
+# fast build rule for target.
+relay/fast:
+	$(MAKE) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/build
+.PHONY : relay/fast
+
+#=============================================================================
 # Target rules for targets named ackermann_talker
 
 # Build rule for target.
@@ -179,6 +192,19 @@ ackermann_talker: cmake_check_build_system
 ackermann_talker/fast:
 	$(MAKE) -f CMakeFiles/ackermann_talker.dir/build.make CMakeFiles/ackermann_talker.dir/build
 .PHONY : ackermann_talker/fast
+
+#=============================================================================
+# Target rules for targets named talker
+
+# Build rule for target.
+talker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 talker
+.PHONY : talker
+
+# fast build rule for target.
+talker/fast:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
+.PHONY : talker/fast
 
 #=============================================================================
 # Target rules for targets named lab1_introduction_uninstall
@@ -233,6 +259,60 @@ src/ackermann_talker.cpp.s:
 	$(MAKE) -f CMakeFiles/ackermann_talker.dir/build.make CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.s
 .PHONY : src/ackermann_talker.cpp.s
 
+src/relay.o: src/relay.cpp.o
+
+.PHONY : src/relay.o
+
+# target to build an object file
+src/relay.cpp.o:
+	$(MAKE) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/src/relay.cpp.o
+.PHONY : src/relay.cpp.o
+
+src/relay.i: src/relay.cpp.i
+
+.PHONY : src/relay.i
+
+# target to preprocess a source file
+src/relay.cpp.i:
+	$(MAKE) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/src/relay.cpp.i
+.PHONY : src/relay.cpp.i
+
+src/relay.s: src/relay.cpp.s
+
+.PHONY : src/relay.s
+
+# target to generate assembly for a file
+src/relay.cpp.s:
+	$(MAKE) -f CMakeFiles/relay.dir/build.make CMakeFiles/relay.dir/src/relay.cpp.s
+.PHONY : src/relay.cpp.s
+
+src/talker.o: src/talker.cpp.o
+
+.PHONY : src/talker.o
+
+# target to build an object file
+src/talker.cpp.o:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.o
+.PHONY : src/talker.cpp.o
+
+src/talker.i: src/talker.cpp.i
+
+.PHONY : src/talker.i
+
+# target to preprocess a source file
+src/talker.cpp.i:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.i
+.PHONY : src/talker.cpp.i
+
+src/talker.s: src/talker.cpp.s
+
+.PHONY : src/talker.s
+
+# target to generate assembly for a file
+src/talker.cpp.s:
+	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.s
+.PHONY : src/talker.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -245,13 +325,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... relay"
 	@echo "... install/strip"
 	@echo "... ackermann_talker"
+	@echo "... talker"
 	@echo "... lab1_introduction_uninstall"
 	@echo "... uninstall"
 	@echo "... src/ackermann_talker.o"
 	@echo "... src/ackermann_talker.i"
 	@echo "... src/ackermann_talker.s"
+	@echo "... src/relay.o"
+	@echo "... src/relay.i"
+	@echo "... src/relay.s"
+	@echo "... src/talker.o"
+	@echo "... src/talker.i"
+	@echo "... src/talker.s"
 .PHONY : help
 
 
