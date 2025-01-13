@@ -1,0 +1,11 @@
+[0.074s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[0.374s] [35m[1mScanning dependencies of target ackermann_talker[0m
+[0.448s] [ 50%] [32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o[0m
+[0.530s] [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Klab1_introduction/ackermann_talker.hpp: No such file or directory
+[0.531s]     5 | #include [01;31m[K"lab1_introduction/ackermann_talker.hpp"[m[K
+[0.532s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.533s] compilation terminated.
+[0.539s] make[2]: *** [CMakeFiles/ackermann_talker.dir/build.make:63: CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o] Error 1
+[0.541s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/ackermann_talker.dir/all] Error 2
+[0.541s] make: *** [Makefile:141: all] Error 2
+[0.570s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6

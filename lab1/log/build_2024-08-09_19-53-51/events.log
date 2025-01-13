@@ -1,0 +1,89 @@
+[0.000000] (-) TimerEvent: {}
+[0.002194] (lab1_introduction) JobQueued: {'identifier': 'lab1_introduction', 'dependencies': OrderedDict()}
+[0.002916] (lab1_introduction) JobStarted: {'identifier': 'lab1_introduction'}
+[0.061429] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'cmake'}
+[0.066700] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'build'}
+[0.072145] (lab1_introduction) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction', '--', '-j6', '-l6'], 'cwd': '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dawgs_nx'), ('SSH_AGENT_PID', '2212'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/dawgs_nx'), ('OLDPWD', '/home/dawgs_nx/dawgs_f1tenth/01_labs'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1704'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5435'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dawgs_nx'), ('JOURNAL_STREAM', '8:54321'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dawgs_nx'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/dawgs_nx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dawgs:@/tmp/.ICE-unix/2281,unix/dawgs:/tmp/.ICE-unix/2281'), ('INVOCATION_ID', 'ce140d2a15d84327b00de651108c8246'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:132074e1-b8ba-4549-a2f3-6ba82dda2748'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.110645] (-) TimerEvent: {}
+[0.212165] (-) TimerEvent: {}
+[0.277679] (lab1_introduction) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.312446] (-) TimerEvent: {}
+[0.413652] (-) TimerEvent: {}
+[0.420127] (lab1_introduction) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.514005] (-) TimerEvent: {}
+[0.615041] (-) TimerEvent: {}
+[0.716160] (-) TimerEvent: {}
+[0.817652] (-) TimerEvent: {}
+[0.918796] (-) TimerEvent: {}
+[1.019745] (-) TimerEvent: {}
+[1.120671] (-) TimerEvent: {}
+[1.221714] (-) TimerEvent: {}
+[1.322899] (-) TimerEvent: {}
+[1.423972] (-) TimerEvent: {}
+[1.497975] (lab1_introduction) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.524303] (-) TimerEvent: {}
+[1.544416] (lab1_introduction) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.624610] (-) TimerEvent: {}
+[1.725939] (-) TimerEvent: {}
+[1.730044] (lab1_introduction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.749097] (lab1_introduction) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.826109] (-) TimerEvent: {}
+[1.927194] (-) TimerEvent: {}
+[2.028274] (-) TimerEvent: {}
+[2.129390] (-) TimerEvent: {}
+[2.230727] (-) TimerEvent: {}
+[2.332453] (-) TimerEvent: {}
+[2.382328] (lab1_introduction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.432853] (-) TimerEvent: {}
+[2.534440] (-) TimerEvent: {}
+[2.635627] (-) TimerEvent: {}
+[2.647981] (lab1_introduction) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[2.655375] (lab1_introduction) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.735848] (-) TimerEvent: {}
+[2.837073] (-) TimerEvent: {}
+[2.938337] (-) TimerEvent: {}
+[3.039476] (-) TimerEvent: {}
+[3.140677] (-) TimerEvent: {}
+[3.241921] (-) TimerEvent: {}
+[3.343417] (-) TimerEvent: {}
+[3.365802] (lab1_introduction) StdoutLine: {'line': b'-- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)\n'}
+[3.443671] (-) TimerEvent: {}
+[3.538088] (lab1_introduction) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[3.543952] (-) TimerEvent: {}
+[3.644997] (-) TimerEvent: {}
+[3.746288] (-) TimerEvent: {}
+[3.847763] (-) TimerEvent: {}
+[3.948971] (-) TimerEvent: {}
+[4.050270] (-) TimerEvent: {}
+[4.118037] (lab1_introduction) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/install.cmake:43 (_install):\n'}
+[4.120324] (lab1_introduction) StderrLine: {'line': b'  _install does not recognize sub-command DIRECTROY\n'}
+[4.121124] (lab1_introduction) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.121601] (lab1_introduction) StderrLine: {'line': b'  CMakeLists.txt:33 (install)\n'}
+[4.122403] (lab1_introduction) StderrLine: {'line': b'\n'}
+[4.122923] (lab1_introduction) StderrLine: {'line': b'\n'}
+[4.123418] (lab1_introduction) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[4.150500] (-) TimerEvent: {}
+[4.252628] (-) TimerEvent: {}
+[4.353680] (-) TimerEvent: {}
+[4.454948] (-) TimerEvent: {}
+[4.522115] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[4.534240] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.538056] (lab1_introduction) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include\n'}
+[4.539111] (lab1_introduction) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.545843] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[4.546931] (lab1_introduction) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[4.551027] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.555223] (-) TimerEvent: {}
+[4.558579] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.559572] (lab1_introduction) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.562875] (lab1_introduction) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.588706] (lab1_introduction) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[4.589576] (lab1_introduction) StdoutLine: {'line': b'See also "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles/CMakeOutput.log".\n'}
+[4.591499] (lab1_introduction) StdoutLine: {'line': b'See also "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles/CMakeError.log".\n'}
+[4.630345] (lab1_introduction) StderrLine: {'line': b'make: *** [Makefile:266: cmake_check_build_system] Error 1\n'}
+[4.642809] (lab1_introduction) CommandEnded: {'returncode': 2}
+[4.663715] (-) TimerEvent: {}
+[4.765425] (-) TimerEvent: {}
+[4.867059] (-) TimerEvent: {}
+[4.898749] (lab1_introduction) JobEnded: {'identifier': 'lab1_introduction', 'rc': 2}
+[4.913141] (-) EventReactorShutdown: {}

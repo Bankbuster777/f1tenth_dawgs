@@ -1,0 +1,14 @@
+source;share/lab1_introduction/hook/cmake_prefix_path.ps1
+source;share/lab1_introduction/hook/cmake_prefix_path.dsv
+source;share/lab1_introduction/hook/cmake_prefix_path.sh
+source;share/lab1_introduction/hook/path.ps1
+source;share/lab1_introduction/hook/path.dsv
+source;share/lab1_introduction/hook/path.sh
+source;share/lab1_introduction/hook/pythonscriptspath.ps1
+source;share/lab1_introduction/hook/pythonscriptspath.dsv
+source;share/lab1_introduction/hook/pythonscriptspath.sh
+source;share/lab1_introduction/local_setup.bash
+source;share/lab1_introduction/local_setup.dsv
+source;share/lab1_introduction/local_setup.ps1
+source;share/lab1_introduction/local_setup.sh
+source;share/lab1_introduction/local_setup.zsh

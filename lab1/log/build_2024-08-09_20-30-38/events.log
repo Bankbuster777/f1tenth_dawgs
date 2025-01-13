@@ -1,0 +1,149 @@
+[0.000000] (-) TimerEvent: {}
+[0.001409] (lab1_introduction) JobQueued: {'identifier': 'lab1_introduction', 'dependencies': OrderedDict()}
+[0.002201] (lab1_introduction) JobStarted: {'identifier': 'lab1_introduction'}
+[0.077851] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'cmake'}
+[0.083136] (lab1_introduction) JobProgress: {'identifier': 'lab1_introduction', 'progress': 'build'}
+[0.092224] (lab1_introduction) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction', '--', '-j6', '-l6'], 'cwd': '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dawgs_nx'), ('SSH_AGENT_PID', '2212'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/dawgs_nx'), ('OLDPWD', '/home/dawgs_nx/dawgs_f1tenth/01_labs'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1704'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5435'), ('_colcon_cd_root', '/opt/ros/foxy/'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dawgs_nx'), ('JOURNAL_STREAM', '8:54321'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dawgs_nx'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/dawgs_nx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dawgs:@/tmp/.ICE-unix/2281,unix/dawgs:/tmp/.ICE-unix/2281'), ('INVOCATION_ID', 'ce140d2a15d84327b00de651108c8246'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:132074e1-b8ba-4549-a2f3-6ba82dda2748'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.103498] (-) TimerEvent: {}
+[0.205665] (-) TimerEvent: {}
+[0.307974] (-) TimerEvent: {}
+[0.410320] (-) TimerEvent: {}
+[0.457810] (lab1_introduction) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ackermann_talker\x1b[0m\n'}
+[0.510603] (-) TimerEvent: {}
+[0.611741] (-) TimerEvent: {}
+[0.712748] (-) TimerEvent: {}
+[0.761380] (lab1_introduction) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o\x1b[0m\n'}
+[0.813137] (-) TimerEvent: {}
+[0.917254] (-) TimerEvent: {}
+[1.030066] (-) TimerEvent: {}
+[1.133107] (-) TimerEvent: {}
+[1.234209] (-) TimerEvent: {}
+[1.336032] (-) TimerEvent: {}
+[1.438000] (-) TimerEvent: {}
+[1.539410] (-) TimerEvent: {}
+[1.641898] (-) TimerEvent: {}
+[1.743105] (-) TimerEvent: {}
+[1.844172] (-) TimerEvent: {}
+[1.945274] (-) TimerEvent: {}
+[2.046389] (-) TimerEvent: {}
+[2.147539] (-) TimerEvent: {}
+[2.248639] (-) TimerEvent: {}
+[2.350053] (-) TimerEvent: {}
+[2.451021] (-) TimerEvent: {}
+[2.552129] (-) TimerEvent: {}
+[2.653743] (-) TimerEvent: {}
+[2.756094] (-) TimerEvent: {}
+[2.857213] (-) TimerEvent: {}
+[2.958221] (-) TimerEvent: {}
+[3.059322] (-) TimerEvent: {}
+[3.160451] (-) TimerEvent: {}
+[3.261559] (-) TimerEvent: {}
+[3.362691] (-) TimerEvent: {}
+[3.463814] (-) TimerEvent: {}
+[3.564965] (-) TimerEvent: {}
+[3.666167] (-) TimerEvent: {}
+[3.767605] (-) TimerEvent: {}
+[3.868974] (-) TimerEvent: {}
+[3.970913] (-) TimerEvent: {}
+[4.072079] (-) TimerEvent: {}
+[4.174272] (-) TimerEvent: {}
+[4.275473] (-) TimerEvent: {}
+[4.376608] (-) TimerEvent: {}
+[4.477976] (-) TimerEvent: {}
+[4.579136] (-) TimerEvent: {}
+[4.680458] (-) TimerEvent: {}
+[4.782522] (-) TimerEvent: {}
+[4.883558] (-) TimerEvent: {}
+[4.985899] (-) TimerEvent: {}
+[5.088593] (-) TimerEvent: {}
+[5.189991] (-) TimerEvent: {}
+[5.291049] (-) TimerEvent: {}
+[5.392330] (-) TimerEvent: {}
+[5.493487] (-) TimerEvent: {}
+[5.594566] (-) TimerEvent: {}
+[5.696306] (-) TimerEvent: {}
+[5.797690] (-) TimerEvent: {}
+[5.898722] (-) TimerEvent: {}
+[5.999794] (-) TimerEvent: {}
+[6.100803] (-) TimerEvent: {}
+[6.202054] (-) TimerEvent: {}
+[6.303225] (-) TimerEvent: {}
+[6.404362] (-) TimerEvent: {}
+[6.506477] (-) TimerEvent: {}
+[6.607501] (-) TimerEvent: {}
+[6.708733] (-) TimerEvent: {}
+[6.809950] (-) TimerEvent: {}
+[6.911640] (-) TimerEvent: {}
+[7.013844] (-) TimerEvent: {}
+[7.114975] (-) TimerEvent: {}
+[7.216440] (-) TimerEvent: {}
+[7.317746] (-) TimerEvent: {}
+[7.419581] (-) TimerEvent: {}
+[7.521256] (-) TimerEvent: {}
+[7.623204] (-) TimerEvent: {}
+[7.724696] (-) TimerEvent: {}
+[7.827588] (-) TimerEvent: {}
+[7.928682] (-) TimerEvent: {}
+[8.030913] (-) TimerEvent: {}
+[8.132116] (-) TimerEvent: {}
+[8.233957] (-) TimerEvent: {}
+[8.309261] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KAckermannTalker::AckermannTalker()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.310327] (lab1_introduction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:18:129:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd::placeholder\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[8.311435] (lab1_introduction) StderrLine: {'line': b'   18 | ate_subscription<sensor_msgs::msg::Joy>("joy", 10, std::bind(&AckermannTalker::joy_callback_, this, std::\x1b[01;31m\x1b[Kplaceholder\x1b[m\x1b[K::_1));\n'}
+[8.311981] (lab1_introduction) StderrLine: {'line': b'      |                                                                                                          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.312483] (lab1_introduction) StderrLine: {'line': b'\n'}
+[8.334237] (-) TimerEvent: {}
+[8.436612] (-) TimerEvent: {}
+[8.537850] (-) TimerEvent: {}
+[8.639032] (-) TimerEvent: {}
+[8.740059] (-) TimerEvent: {}
+[8.841422] (-) TimerEvent: {}
+[8.944075] (-) TimerEvent: {}
+[9.045897] (-) TimerEvent: {}
+[9.147030] (-) TimerEvent: {}
+[9.248241] (-) TimerEvent: {}
+[9.349308] (-) TimerEvent: {}
+[9.450404] (-) TimerEvent: {}
+[9.551513] (-) TimerEvent: {}
+[9.652698] (-) TimerEvent: {}
+[9.754715] (-) TimerEvent: {}
+[9.856435] (-) TimerEvent: {}
+[9.958487] (-) TimerEvent: {}
+[10.060324] (-) TimerEvent: {}
+[10.161490] (-) TimerEvent: {}
+[10.263962] (-) TimerEvent: {}
+[10.365491] (-) TimerEvent: {}
+[10.466712] (-) TimerEvent: {}
+[10.568986] (-) TimerEvent: {}
+[10.671296] (-) TimerEvent: {}
+[10.772495] (-) TimerEvent: {}
+[10.873743] (-) TimerEvent: {}
+[10.975755] (-) TimerEvent: {}
+[11.077540] (-) TimerEvent: {}
+[11.179027] (-) TimerEvent: {}
+[11.280472] (-) TimerEvent: {}
+[11.381613] (-) TimerEvent: {}
+[11.482812] (-) TimerEvent: {}
+[11.584021] (-) TimerEvent: {}
+[11.685377] (-) TimerEvent: {}
+[11.786569] (-) TimerEvent: {}
+[11.887796] (-) TimerEvent: {}
+[11.989757] (-) TimerEvent: {}
+[12.090869] (-) TimerEvent: {}
+[12.192308] (-) TimerEvent: {}
+[12.293424] (-) TimerEvent: {}
+[12.395110] (-) TimerEvent: {}
+[12.496194] (-) TimerEvent: {}
+[12.597372] (-) TimerEvent: {}
+[12.698389] (-) TimerEvent: {}
+[12.800186] (-) TimerEvent: {}
+[12.901332] (-) TimerEvent: {}
+[12.960018] (lab1_introduction) StderrLine: {'line': b'make[2]: *** [CMakeFiles/ackermann_talker.dir/build.make:63: CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o] Error 1\n'}
+[12.962378] (lab1_introduction) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/ackermann_talker.dir/all] Error 2\n'}
+[12.963552] (lab1_introduction) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[12.976889] (lab1_introduction) CommandEnded: {'returncode': 2}
+[13.002087] (-) TimerEvent: {}
+[13.106229] (-) TimerEvent: {}
+[13.208584] (-) TimerEvent: {}
+[13.247134] (lab1_introduction) JobEnded: {'identifier': 'lab1_introduction', 'rc': 2}
+[13.261685] (-) EventReactorShutdown: {}

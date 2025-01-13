@@ -1,0 +1,15 @@
+CMake Error at CMakeLists.txt:33 (add_library):
+  add_library cannot create target "ackermann_talker" because another target
+  with the same name already exists.  The existing target is an executable
+  created in source directory
+  "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction".  See
+  documentation for policy CMP0002 for more details.
+
+
+CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/install.cmake:43 (_install):
+  _install does not recognize sub-command DIRECTROY
+Call Stack (most recent call first):
+  CMakeLists.txt:35 (install)
+
+
+make: *** [Makefile:266: cmake_check_build_system] Error 1

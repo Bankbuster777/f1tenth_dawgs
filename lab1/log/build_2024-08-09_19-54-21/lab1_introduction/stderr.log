@@ -1,0 +1,15 @@
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:8:34:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared ‘[01m[KAckermannTalker::AckermannTalker()[m[K’
+    8 | AckermannTalker::AckermannTalker([01;31m[K)[m[K: Node("ackermann_talker")
+      |                                  [01;31m[K^[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:[m[K In member function ‘[01m[Kvoid AckermannTalker::joy_callback_(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:27:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteering_gain[m[K’ was not declared in this scope; did you mean ‘[01m[Ksteering_gain_[m[K’?
+   27 |     double steering_gain_new = [01;31m[Ksteering_gain[m[K * abs(joy_msg->axes[0]);
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                [32m[Ksteering_gain_[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:34:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteering_gain[m[K’ was not declared in this scope; did you mean ‘[01m[Ksteering_gain_[m[K’?
+   34 |     double steering_gain_new = [01;31m[Ksteering_gain[m[K * abs(joy_msg->axes[0]);
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                [32m[Ksteering_gain_[m[K
+make[2]: *** [CMakeFiles/ackermann_talker.dir/build.make:63: CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/ackermann_talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

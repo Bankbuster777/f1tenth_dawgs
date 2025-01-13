@@ -1,0 +1,31 @@
+[0.096s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[0.426s] [35m[1mScanning dependencies of target ackermann_talker[0m
+[0.712s] [ 50%] [32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o[0m
+[27.473s] [100%] [32m[1mLinking CXX executable ackermann_talker[0m
+[28.809s] [100%] Built target ackermann_talker
+[28.903s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[29.151s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction
+[29.213s] -- Install configuration: ""
+[29.217s] -- Execute custom install script
+[29.222s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp
+[29.229s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/lib/lab1_introduction/ackermann_talker
+[29.235s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction//launch/ackermann_talker_launch.py
+[29.240s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction//config/param.yaml
+[29.244s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/ament_index/resource_index/package_run_dependencies/lab1_introduction
+[29.249s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/ament_index/resource_index/parent_prefix_path/lab1_introduction
+[29.254s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/ament_prefix_path.sh
+[29.255s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/ament_prefix_path.dsv
+[29.256s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/path.sh
+[29.260s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/path.dsv
+[29.262s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.bash
+[29.265s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.sh
+[29.267s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.zsh
+[29.274s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.dsv
+[29.275s] -- Symlinking: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.dsv
+[29.337s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/ament_index/resource_index/packages/lab1_introduction
+[29.343s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/cmake/lab1_introductionConfig.cmake
+[29.344s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/cmake/lab1_introductionConfig-version.cmake
+[29.354s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.xml
+[29.355s] -- Installing: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/bin/ackermann_talker
+[29.385s] -- Set runtime path of "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/bin/ackermann_talker" to ""
+[29.402s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction

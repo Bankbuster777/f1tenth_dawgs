@@ -1,0 +1,39 @@
+[0.094s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction -DCMAKE_INSTALL_PREFIX=/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction
+[0.224s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.367s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.419s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.472s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.654s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.674s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.304s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.563s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.571s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.302s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[3.479s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[4.027s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.405s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.413s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.414s] -- Configured cppcheck include dirs: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include
+[4.415s] -- Configured cppcheck exclude dirs and/or files: 
+[4.420s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.421s] -- Configured cpplint exclude dirs and/or files: 
+[4.426s] -- Added test 'lint_cmake' to check CMake code style
+[4.434s] -- Added test 'uncrustify' to check C / C++ code style
+[4.435s] -- Configured uncrustify additional arguments: 
+[4.436s] -- Added test 'xmllint' to check XML markup files
+[4.459s] -- Configuring done
+[4.466s] CMake Error at CMakeLists.txt:28 (add_executable):
+[4.466s]   Cannot find source file:
+[4.467s] 
+[4.468s]     src/lab1_introduction/ackermann_talker.cpp
+[4.468s] 
+[4.468s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+[4.469s]   .hpp .hxx .in .txx
+[4.469s] 
+[4.470s] 
+[4.474s] CMake Error at CMakeLists.txt:28 (add_executable):
+[4.475s]   No SOURCES given to target: ackermann_talker
+[4.476s] 
+[4.476s] 
+[4.477s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[4.515s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction -DCMAKE_INSTALL_PREFIX=/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction

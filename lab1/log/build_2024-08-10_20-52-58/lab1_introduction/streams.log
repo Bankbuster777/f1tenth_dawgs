@@ -1,0 +1,27 @@
+[0.116s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[0.501s] [100%] Built target ackermann_talker
+[0.582s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[0.816s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction
+[0.868s] -- Install configuration: ""
+[0.874s] -- Execute custom install script
+[0.878s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp
+[0.882s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/lib/lab1_introduction/ackermann_talker
+[0.888s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction//launch/ackermann_talker_launch.py
+[0.890s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction//config/param.yaml
+[0.893s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/ament_index/resource_index/package_run_dependencies/lab1_introduction
+[0.895s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/ament_index/resource_index/parent_prefix_path/lab1_introduction
+[0.898s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/ament_prefix_path.sh
+[0.900s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/ament_prefix_path.dsv
+[0.911s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/path.sh
+[0.914s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/environment/path.dsv
+[0.915s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.bash
+[0.915s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.sh
+[0.916s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.zsh
+[0.916s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/local_setup.dsv
+[0.918s] -- Symlinking: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.dsv
+[0.978s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/ament_index/resource_index/packages/lab1_introduction
+[0.982s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/cmake/lab1_introductionConfig.cmake
+[0.983s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/cmake/lab1_introductionConfig-version.cmake
+[0.986s] -- Up-to-date symlink: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.xml
+[0.988s] -- Up-to-date: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/bin/ackermann_talker
+[1.008s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction

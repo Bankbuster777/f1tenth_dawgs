@@ -1,0 +1,34 @@
+[0.104s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[0.276s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.418s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.496s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.542s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.728s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.747s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.380s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.646s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.653s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.364s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+[3.536s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[4.117s] CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/install.cmake:43 (_install):
+[4.118s]   _install does not recognize sub-command DIRECTROY
+[4.118s] Call Stack (most recent call first):
+[4.119s]   CMakeLists.txt:33 (install)
+[4.120s] 
+[4.120s] 
+[4.121s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.520s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.532s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.536s] -- Configured cppcheck include dirs: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include
+[4.536s] -- Configured cppcheck exclude dirs and/or files: 
+[4.544s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.544s] -- Configured cpplint exclude dirs and/or files: 
+[4.549s] -- Added test 'lint_cmake' to check CMake code style
+[4.556s] -- Added test 'uncrustify' to check C / C++ code style
+[4.557s] -- Configured uncrustify additional arguments: 
+[4.560s] -- Added test 'xmllint' to check XML markup files
+[4.586s] -- Configuring incomplete, errors occurred!
+[4.588s] See also "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles/CMakeOutput.log".
+[4.589s] See also "/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction/CMakeFiles/CMakeError.log".
+[4.628s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[4.641s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6

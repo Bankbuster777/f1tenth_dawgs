@@ -1,0 +1,155 @@
+[1.051s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.051s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff97beea60>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff97beea60>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff97bbcf70>)
+[1.895s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.896s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.896s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.898s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1'
+[1.898s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.899s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.900s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.961s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.961s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.962s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.962s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.962s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.963s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.964s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.964s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.965s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.965s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.965s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.966s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.967s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.967s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.967s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.968s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.969s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.969s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.969s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.970s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.971s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.972s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extensions ['ignore', 'ignore_ament_install']
+[1.972s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extension 'ignore'
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extension 'ignore_ament_install'
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extensions ['colcon_pkg']
+[1.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extension 'colcon_pkg'
+[1.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extensions ['colcon_meta']
+[1.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extension 'colcon_meta'
+[1.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extensions ['ros']
+[1.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_introduction) by extension 'ros'
+[1.988s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab1_introduction' with type 'ros.ament_cmake' and name 'lab1_introduction'
+[1.988s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.989s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.989s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.989s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.989s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.067s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.068s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.077s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install
+[2.086s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 286 installed packages in /opt/ros/foxy
+[2.095s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.493s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'cmake_args' from command line to 'None'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'cmake_target' from command line to 'None'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'cmake_clean_cache' from command line to 'False'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'cmake_clean_first' from command line to 'False'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'cmake_force_configure' from command line to 'False'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'ament_cmake_args' from command line to 'None'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'catkin_cmake_args' from command line to 'None'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'lab1_introduction' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.495s] DEBUG:colcon.colcon_core.verb:Building package 'lab1_introduction' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction', 'merge_install': False, 'path': '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction', 'symlink_install': False, 'test_result_base': None}
+[2.496s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.502s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.503s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction' with build type 'ament_cmake'
+[2.504s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction'
+[2.514s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.516s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.516s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.589s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[3.101s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[3.335s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction
+[3.503s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab1_introduction)
+[3.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction
+[3.522s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction' for CMake module files
+[3.526s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction' for CMake config files
+[3.528s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_introduction', 'cmake_prefix_path')
+[3.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/cmake_prefix_path.ps1'
+[3.534s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/cmake_prefix_path.dsv'
+[3.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/cmake_prefix_path.sh'
+[3.543s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/bin'
+[3.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_introduction', 'path')
+[3.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/path.ps1'
+[3.547s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/path.dsv'
+[3.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/path.sh'
+[3.551s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/lib/pkgconfig/lab1_introduction.pc'
+[3.552s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/lib/python3.8/site-packages'
+[3.553s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/bin'
+[3.554s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_introduction', 'pythonscriptspath')
+[3.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/pythonscriptspath.ps1'
+[3.557s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/pythonscriptspath.dsv'
+[3.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/pythonscriptspath.sh'
+[3.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.ps1'
+[3.569s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.dsv'
+[3.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.sh'
+[3.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.bash'
+[3.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.zsh'
+[3.586s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/colcon-core/packages/lab1_introduction)
+[3.755s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab1_introduction)
+[3.759s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction' for CMake module files
+[3.763s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction' for CMake config files
+[3.766s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_introduction', 'cmake_prefix_path')
+[3.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/cmake_prefix_path.ps1'
+[3.774s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/cmake_prefix_path.dsv'
+[3.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/cmake_prefix_path.sh'
+[3.782s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/bin'
+[3.782s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_introduction', 'path')
+[3.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/path.ps1'
+[3.786s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/path.dsv'
+[3.788s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/path.sh'
+[3.791s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/lib/pkgconfig/lab1_introduction.pc'
+[3.792s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/lib/python3.8/site-packages'
+[3.793s] Level 1:colcon.colcon_core.environment:checking '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/bin'
+[3.794s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_introduction', 'pythonscriptspath')
+[3.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/pythonscriptspath.ps1'
+[3.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/pythonscriptspath.dsv'
+[3.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/hook/pythonscriptspath.sh'
+[3.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.ps1'
+[3.807s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.dsv'
+[3.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.sh'
+[3.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.bash'
+[3.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/lab1_introduction/package.zsh'
+[3.818s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/lab1_introduction/share/colcon-core/packages/lab1_introduction)
+[3.820s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.823s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.824s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.824s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.870s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.871s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.872s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.987s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.989s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/local_setup.ps1'
+[3.995s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/_local_setup_util_ps1.py'
+[4.002s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/setup.ps1'
+[4.010s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/local_setup.sh'
+[4.013s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/_local_setup_util_sh.py'
+[4.018s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/setup.sh'
+[4.024s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/local_setup.bash'
+[4.027s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/setup.bash'
+[4.033s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/local_setup.zsh'
+[4.037s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/install/setup.zsh'

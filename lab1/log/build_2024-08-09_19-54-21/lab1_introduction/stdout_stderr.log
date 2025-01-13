@@ -1,0 +1,42 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ackermann_msgs: 2.0.2 (/opt/ros/foxy/share/ackermann_msgs/cmake)
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction
+[35m[1mScanning dependencies of target ackermann_talker[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o[0m
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:8:34:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared ‘[01m[KAckermannTalker::AckermannTalker()[m[K’
+    8 | AckermannTalker::AckermannTalker([01;31m[K)[m[K: Node("ackermann_talker")
+      |                                  [01;31m[K^[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:[m[K In member function ‘[01m[Kvoid AckermannTalker::joy_callback_(sensor_msgs::msg::Joy_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:27:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteering_gain[m[K’ was not declared in this scope; did you mean ‘[01m[Ksteering_gain_[m[K’?
+   27 |     double steering_gain_new = [01;31m[Ksteering_gain[m[K * abs(joy_msg->axes[0]);
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                [32m[Ksteering_gain_[m[K
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:34:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteering_gain[m[K’ was not declared in this scope; did you mean ‘[01m[Ksteering_gain_[m[K’?
+   34 |     double steering_gain_new = [01;31m[Ksteering_gain[m[K * abs(joy_msg->axes[0]);
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                [32m[Ksteering_gain_[m[K
+make[2]: *** [CMakeFiles/ackermann_talker.dir/build.make:63: CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/ackermann_talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,50 @@
+[0.098s] Invoking command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6
+[0.367s] [35m[1mScanning dependencies of target ackermann_talker[0m
+[0.763s] [ 50%] [32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o[0m
+[8.169s] [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:8:34:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared ‘[01m[KAckermannTalker::AckermannTalker()[m[K’
+[8.170s]     8 | AckermannTalker::AckermannTalker([01;31m[K)[m[K: Node("ackermann_talker")
+[8.171s]       |                                  [01;31m[K^[m[K
+[10.934s] In file included from [01m[K/usr/include/aarch64-linux-gnu/c++/9/bits/c++allocator.h:33[m[K,
+[10.935s]                  from [01m[K/usr/include/c++/9/bits/allocator.h:46[m[K,
+[10.935s]                  from [01m[K/usr/include/c++/9/memory:63[m[K,
+[10.936s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+[10.937s]                  from [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp:1[m[K,
+[10.938s]                  from [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:5[m[K:
+[10.939s] /usr/include/c++/9/ext/new_allocator.h: In instantiation of ‘[01m[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = AckermannTalker; _Args = {}; _Tp = AckermannTalker][m[K’:
+[10.939s] [01m[K/usr/include/c++/9/bits/alloc_traits.h:483:4:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<_Tp1> >::construct(std::allocator_traits<std::allocator<_Tp1> >::allocator_type&, _Up*, _Args&& ...) [with _Up = AckermannTalker; _Args = {}; _Tp = AckermannTalker; std::allocator_traits<std::allocator<_Tp1> >::allocator_type = std::allocator<AckermannTalker>][m[K’
+[10.940s] [01m[K/usr/include/c++/9/bits/shared_ptr_base.h:548:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {}; _Tp = AckermannTalker; _Alloc = std::allocator<AckermannTalker>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[10.940s] [01m[K/usr/include/c++/9/bits/shared_ptr_base.h:679:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = AckermannTalker; _Alloc = std::allocator<AckermannTalker>; _Args = {}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[10.940s] [01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1344:71:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<AckermannTalker>; _Args = {}; _Tp = AckermannTalker; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[10.941s] [01m[K/usr/include/c++/9/bits/shared_ptr.h:359:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<AckermannTalker>; _Args = {}; _Tp = AckermannTalker][m[K’
+[10.941s] [01m[K/usr/include/c++/9/bits/shared_ptr.h:701:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = AckermannTalker; _Alloc = std::allocator<AckermannTalker>; _Args = {}][m[K’
+[10.942s] [01m[K/usr/include/c++/9/bits/shared_ptr.h:717:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = AckermannTalker; _Args = {}][m[K’
+[10.942s] [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:59:50:[m[K   required from here
+[10.943s] [01m[K/usr/include/c++/9/ext/new_allocator.h:146:4:[m[K [01;31m[Kerror: [m[Kuse of deleted function ‘[01m[KAckermannTalker::AckermannTalker()[m[K’
+[10.943s]   146 |  { [01;31m[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)[m[K; }
+[10.944s]       |    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.944s] In file included from [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:5[m[K:
+[10.945s] [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp:5:7:[m[K [01;36m[Knote: [m[K‘[01m[KAckermannTalker::AckermannTalker()[m[K’ is implicitly deleted because the default definition would be ill-formed:
+[10.945s]     5 | class [01;36m[KAckermannTalker[m[K : public rclcpp::Node
+[10.946s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[10.946s] [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp:5:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::Node()[m[K’
+[10.946s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[10.947s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[10.947s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[10.948s]                  from [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/include/lab1_introduction/ackermann_talker.hpp:1[m[K,
+[10.948s]                  from [01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:5[m[K:
+[10.949s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1193:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const rclcpp::Node&, const string&)[m[K’
+[10.949s]  1193 |   [01;36m[KNode[m[K(
+[10.950s]       |   [01;36m[K^~~~[m[K
+[10.950s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1193:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[10.951s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:98:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const string&, const rclcpp::NodeOptions&)[m[K’
+[10.951s]    98 |   explicit [01;36m[KNode[m[K(
+[10.951s]       |            [01;36m[K^~~~[m[K
+[10.952s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:98:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[10.952s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:86:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const rclcpp::NodeOptions&)[m[K’
+[10.953s]    86 |   explicit [01;36m[KNode[m[K(
+[10.953s]       |            [01;36m[K^~~~[m[K
+[10.953s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:86:12:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[11.366s] make[2]: *** [CMakeFiles/ackermann_talker.dir/build.make:63: CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o] Error 1
+[11.368s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/ackermann_talker.dir/all] Error 2
+[11.368s] make: *** [Makefile:141: all] Error 2
+[11.383s] Invoked command in '/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/build/lab1_introduction -- -j6 -l6

@@ -1,0 +1,10 @@
+[35m[1mScanning dependencies of target ackermann_talker[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o[0m
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:[m[K In constructor ‘[01m[KAckermannTalker::AckermannTalker()[m[K’:
+[01m[K/home/dawgs_nx/dawgs_f1tenth/01_labs/lab1/src/lab1_introduction/src/ackermann_talker.cpp:18:129:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::placeholder[m[K’ has not been declared
+   18 | ate_subscription<sensor_msgs::msg::Joy>("joy", 10, std::bind(&AckermannTalker::joy_callback_, this, std::[01;31m[Kplaceholder[m[K::_1));
+      |                                                                                                          [01;31m[K^~~~~~~~~~~[m[K
+
+make[2]: *** [CMakeFiles/ackermann_talker.dir/build.make:63: CMakeFiles/ackermann_talker.dir/src/ackermann_talker.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/ackermann_talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

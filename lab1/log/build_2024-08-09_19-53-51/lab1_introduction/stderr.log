@@ -1,0 +1,7 @@
+CMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/install.cmake:43 (_install):
+  _install does not recognize sub-command DIRECTROY
+Call Stack (most recent call first):
+  CMakeLists.txt:33 (install)
+
+
+make: *** [Makefile:266: cmake_check_build_system] Error 1
