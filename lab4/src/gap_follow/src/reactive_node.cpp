@@ -31,7 +31,7 @@ private:
 
     const int scan_indices = 1080;
 
-    const float far_threshold = 8.0f;
+    const float far_threshold = 17.0f;
     const float near_threshold = 0.1f;
 
     const float continuity_gap = 0.05f;
@@ -87,7 +87,7 @@ private:
     {
         // Return the start index & end index of the max gap in free_space_ranges
         float gap_arr[1080] = {0};
-        float * gap_width = gap_arr; // or = new float[] ?
+        float * gap_max = gap_arr;
         int idx_arr[1080] = {0};
         int * chunk_idx = idx_arr;
         int j = 1;
@@ -102,24 +102,75 @@ private:
         }
         chunk_idx[j] = scan_indices - 1; // end of scan
 
-        // wider gap version
-        int wide_idx =0;
-        for (int i = 0; i < j; i++)
+        enum gap_versions
         {
-            gap_width[i] = M_PI/180 * 0.25 * (chunk_idx[i+1] - chunk_idx[i]) * ranges[chunk_idx[i]]; // average distance or shortest distance for gap
-            if(gap_width[i]> gap_width[wide_idx])
+            gap_wider,
+            gap_deeper,
+            gap_spacier
+        };
+
+        gap_versions gap_ver = gap_wider;
+
+        switch (gap_ver)
+        {
+        case gap_wider:
+            int wide_idx = 0;
+            for (int i = 0; i < j; i++)
             {
-                wide_idx = i;
+                gap_max[i] = chunk_idx[i+1] - chunk_idx[i]) * ranges[(int)(chunk_idx[i]+chunk_idx[i+1])/2]; // average distance or shortest distance for gap
+                if(gap_max[i]> gap_max[wide_idx])
+                {
+                    wide_idx = i;
+                }
             }
+            indice[0] = chunk_idx[wide_idx];
+            indice[1] = chunk_idx[wide_idx + 1];
+            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Wider gap: %.2lf between %d and %d", gap_max[wide_idx], indice[0], indice[1]);
+
+            break;
+
+        case gap_deeper:
+            int deep_idx = 0;
+            for (int i = 0; i < j; i++)
+            {
+                for (int k = chunk_idx[i]; k < chunk_idx[i+1]; k++)
+                {
+                    gap_depth[i] += ranges[k];
+                }
+                if(gap_depth[i]/(chunk_idx[i+1]-chunk_idx[i]) > gap_depth[deep_idx]/(chunk_idx[deep_idx+1]-chunk_idx[deep_idx]))
+                {
+                    deep_idx = i;
+                }
+            }
+
+            indice[0] = chunk_idx[deep_idx];
+            indice[1] = chunk_idx[deep_idx + 1];
+            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Wider gap: %.2lf between %d and %d", gap_max[deep_idx], indice[0], indice[1]);
+            break;
+
+        case gap_spacier:
+            int space_idx = 0;
+            for (int i = 0; i < j; i++)
+            {
+                for (int k = chunk_idx[i]; k < chunk_idx[i+1]; k++)
+                {
+                    gap_space[i] += ranges[k];
+                }
+                if(gap_space[i] > gap_space[space_idx])
+                {
+                    space_idx = i;
+                }
+            }
+
+            indice[0] = chunk_idx[space_idx];
+            indice[1] = chunk_idx[space_idx + 1];
+            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Spacier gap: %.2lf between %d and %d", gap_max[space_idx], indice[0], indice[1]);
+            break;
+
+        default:
+            RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Gap version doesn't set: %d", gap_ver);
+            break;
         }
-
-        indice[0] = chunk_idx[wide_idx];
-        indice[1] = chunk_idx[wide_idx + 1];
-        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Wider gap: %.2lf between %d and %d", gap_width[wide_idx], indice[0], indice[1]);
-
-        // TODO: deeper gap version
-
-        // TODO: spacier gap version
 
         return;
     }
@@ -131,23 +182,32 @@ private:
 	    // Naive: Choose the furthest point within ranges and go there
 
         // apply safety bubble (in incremental way)
-        int safety_bubble_left, safety_bubble_right;
-        safety_bubble_left = vehicle_width/2 * 4 * 180/M_PI/ranges[indice[0]-1];
-        safety_bubble_right = vehicle_width/2 * 4 * 180/M_PI/ranges[indice[1]];
+        int safety_bubble[2];
+
+        // TODO: bubbles needed to be narrower
+        safety_bubble[0] = vehicle_width/2 * 4 * 180/M_PI/ranges[indice[0]-1];
+        safety_bubble[1] = vehicle_width/2 * 4 * 180/M_PI/ranges[indice[1]];
+        RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Bubbles on Left: %d, Right: %d", safety_bubble[0], safety_bubble[1]);
 
         int start_i, end_i, best_i;
-        start_i = indice[0] + safety_bubble_left;
-        end_i = indice[1] - safety_bubble_right;
+        start_i = indice[0] + safety_bubble[0];
+        end_i = indice[1] - safety_bubble[1];
         if(start_i > end_i)
         {
             RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 700, "Invalid gap: start_index = %d, end_index = %d ", start_i, end_i);
-            // if multiple happens, then change gap version
+            // if happens many time, then change gap version
         }
         else
         {
+            // middle is the best
             best_i = (end_i + start_i)/2;
             indice[2] = best_i;
             RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Best point: %d ", indice[2]);
+
+            for (int i = start_i; i < end_i; i++)
+            {
+                ranges[i] 
+            }
         }
 
         return;
