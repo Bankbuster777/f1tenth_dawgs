@@ -109,67 +109,72 @@ private:
             gap_spacier
         };
 
-        gap_versions gap_ver = gap_wider;
+        gap_versions gap_ver = gap_spacier;
 
         switch (gap_ver)
         {
-        case gap_wider:
-            int wide_idx = 0;
-            for (int i = 0; i < j; i++)
-            {
-                gap_max[i] = chunk_idx[i+1] - chunk_idx[i]) * ranges[(int)(chunk_idx[i]+chunk_idx[i+1])/2]; // average distance or shortest distance for gap
-                if(gap_max[i]> gap_max[wide_idx])
+            case gap_wider:
                 {
-                    wide_idx = i;
+                    int wide_idx = 0;
+                    for (int i = 0; i < j; i++)
+                    {
+                        gap_max[i] = (chunk_idx[i+1] - chunk_idx[i]) * ranges[(int)(chunk_idx[i]+chunk_idx[i+1])/2]; // average distance or shortest distance for gap
+                        if(gap_max[i]> gap_max[wide_idx])
+                        {
+                            wide_idx = i;
+                        }
+                    }
+                    indice[0] = chunk_idx[wide_idx];
+                    indice[1] = chunk_idx[wide_idx + 1];
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Wider gap: %.2lf between %d and %d", gap_max[wide_idx], indice[0], indice[1]);
+
+                    break;
                 }
-            }
-            indice[0] = chunk_idx[wide_idx];
-            indice[1] = chunk_idx[wide_idx + 1];
-            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Wider gap: %.2lf between %d and %d", gap_max[wide_idx], indice[0], indice[1]);
-
-            break;
-
-        case gap_deeper:
-            int deep_idx = 0;
-            for (int i = 0; i < j; i++)
-            {
-                for (int k = chunk_idx[i]; k < chunk_idx[i+1]; k++)
+            case gap_deeper:
                 {
-                    gap_depth[i] += ranges[k];
+                    int deep_idx = 0;
+                    for (int i = 0; i < j; i++)
+                    {
+                        for (int k = chunk_idx[i]; k < chunk_idx[i+1]; k++)
+                        {
+                            gap_max[i] += ranges[k];
+                        }
+                        if(gap_max[i]/(chunk_idx[i+1]-chunk_idx[i]) > gap_max[deep_idx]/(chunk_idx[deep_idx+1]-chunk_idx[deep_idx]))
+                        {
+                            deep_idx = i;
+                        }
+                    }
+
+                    indice[0] = chunk_idx[deep_idx];
+                    indice[1] = chunk_idx[deep_idx + 1];
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Wider gap: %.2lf between %d and %d", gap_max[deep_idx], indice[0], indice[1]);
+                    break;
                 }
-                if(gap_depth[i]/(chunk_idx[i+1]-chunk_idx[i]) > gap_depth[deep_idx]/(chunk_idx[deep_idx+1]-chunk_idx[deep_idx]))
+
+            case gap_spacier:
                 {
-                    deep_idx = i;
+                    int space_idx = 0;
+                    for (int i = 0; i < j; i++)
+                    {
+                        for (int k = chunk_idx[i]; k < chunk_idx[i+1]; k++)
+                        {
+                            gap_max[i] += ranges[k];
+                        }
+                        if(gap_max[i] > gap_max[space_idx])
+                        {
+                            space_idx = i;
+                        }
+                    }
+
+                    indice[0] = chunk_idx[space_idx];
+                    indice[1] = chunk_idx[space_idx + 1];
+                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Spacier gap: %.2lf between %d and %d", gap_max[space_idx], indice[0], indice[1]);
+                    break;
                 }
-            }
 
-            indice[0] = chunk_idx[deep_idx];
-            indice[1] = chunk_idx[deep_idx + 1];
-            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Wider gap: %.2lf between %d and %d", gap_max[deep_idx], indice[0], indice[1]);
-            break;
-
-        case gap_spacier:
-            int space_idx = 0;
-            for (int i = 0; i < j; i++)
-            {
-                for (int k = chunk_idx[i]; k < chunk_idx[i+1]; k++)
-                {
-                    gap_space[i] += ranges[k];
-                }
-                if(gap_space[i] > gap_space[space_idx])
-                {
-                    space_idx = i;
-                }
-            }
-
-            indice[0] = chunk_idx[space_idx];
-            indice[1] = chunk_idx[space_idx + 1];
-            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1300, "Spacier gap: %.2lf between %d and %d", gap_max[space_idx], indice[0], indice[1]);
-            break;
-
-        default:
-            RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Gap version doesn't set: %d", gap_ver);
-            break;
+            default:
+                RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Gap version doesn't set: %d", gap_ver);
+                break;
         }
 
         return;
@@ -219,12 +224,12 @@ private:
                     break;
 
                 default:
-                    RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Best version doesn't set: %d", bets_vesrion);
+                    RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Best version doesn't set: %d", best_version);
                     break;
             }
 
             indice[2] = best_i;
-            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Best point: %d ", indice[2]);
+            RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Best ver: %d, point: %d ", best_version, indice[2]);
         }
 
         return;
