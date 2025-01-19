@@ -192,6 +192,9 @@ private:
         int start_i, end_i, best_i;
         start_i = indice[0] + safety_bubble[0];
         end_i = indice[1] - safety_bubble[1];
+        best_i = start_i;
+
+        int best_version = 1;
         if(start_i > end_i)
         {
             RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 700, "Invalid gap: start_index = %d, end_index = %d ", start_i, end_i);
@@ -199,15 +202,29 @@ private:
         }
         else
         {
-            // middle is the best
-            best_i = (end_i + start_i)/2;
+            switch(best_version)
+            {
+                case 0:
+                    best_i = (end_i + start_i)/2;
+                    break;
+
+                case 1:
+                    for (int i = start_i; i < end_i; i++)
+                    {
+                        if (ranges[i] > ranges[best_i])
+                        {
+                            best_i = i;
+                        }
+                    }
+                    break;
+
+                default:
+                    RCLCPP_ERROR_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Best version doesn't set: %d", bets_vesrion);
+                    break;
+            }
+
             indice[2] = best_i;
             RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1700, "Best point: %d ", indice[2]);
-
-            for (int i = start_i; i < end_i; i++)
-            {
-                ranges[i] 
-            }
         }
 
         return;
