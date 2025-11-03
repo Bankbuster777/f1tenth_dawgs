@@ -6,7 +6,7 @@ path_planner_node:
     # Pre-conditions
     #   - check base_system(f1tenth) map
     #   - run speedopt or global_planner_offline
-    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1029/mohyun_slam_ekf_iqp.csv"
+    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1030/mohyun_slam_v3_iqp.csv"
     # "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/icheon/icheon1009_map_lippboyd_speedopted.csv"
 
 
@@ -125,7 +125,7 @@ path_planner_node:
     frenet_road_half_width: 1.5          # Half width of drivable area [m]
 
     # Enhanced safety parameters
-    frenet_vehicle_radius: 0.05          # Vehicle footprint radius [m] - F1TENTH car width ~0.2m
+    frenet_vehicle_radius: 0.10          # Vehicle footprint radius [m] - F1TENTH car width ~0.2m
     frenet_obstacle_radius: 0.10         # Expected obstacle radius [m]
     frenet_k_velocity_safety: 0.05       # Velocity-dependent safety gain
     frenet_min_safety_margin: 0.00       # Minimum safety margin [m]
@@ -162,7 +162,7 @@ path_planner_node:
                                          #          → Warning zone width = 0.4m
                                          #          → Wall at 1.0m distance = NO COST
 
-    frenet_warning_cost: 7.0             # Cost weight in warning zone
+    frenet_warning_cost: 5.0             # Cost weight in warning zone
                                          # EFFECT: Scales the linear penalty in warning zone
                                          #         Higher = stronger avoidance within warning zone
                                          #         Lower = more relaxed avoidance

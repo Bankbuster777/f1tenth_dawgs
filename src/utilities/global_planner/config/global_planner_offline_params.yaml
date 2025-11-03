@@ -10,7 +10,7 @@ global_planner_offline_node:
     # map_name: "Budapest_map"
     # map_dir: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/racetracks/Budapest"
     map_name: "mohyun_slam_ekf"
-    map_dir: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1029/"
+    map_dir: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1030/"
     # /home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/icheon/map_1009v3_20251009_224402.png
 
     # === TRAJECTORY OPTIMIZATION PARAMETERS ===

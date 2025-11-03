@@ -6,7 +6,7 @@ particle_filter:
     # Note: Use 'odom' without '/' to allow remapping to work properly
     # range data downsampling
     angle_step: 21
-    max_particles: 2500
+    max_particles: 2300
     squash_factor: 2.2
     # visualization
     viz: 1

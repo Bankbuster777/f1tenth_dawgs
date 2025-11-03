@@ -1,0 +1,20 @@
+path_recorder_node:
+  ros__parameters:
+    # Topic configuration
+    odom_topic: '/pf/pose/odom'
+    global_path_topic: '/global_centerline'
+
+    # Recording configuration
+    recording_enabled: true
+    save_to_csv: true
+    csv_output_dir: '/home/dawgs_nx/f1tenth_dawgs/src/utilities/path_recorder/data'
+    max_recording_points: 10000  # Limit memory usage
+
+    # Statistics update rate (Hz)
+    stats_update_rate: 1.0
+
+    # Visualization parameters
+    triangle_size: 0.15        # Size of direction triangles (meters)
+    triangle_spacing: 0.2      # Distance between triangles (meters)
+    min_speed: 0.0             # Minimum speed for color mapping (m/s)
+    max_speed: 8.0             # Maximum speed for color mapping (m/s)

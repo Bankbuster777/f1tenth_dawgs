@@ -1002,3 +1002,239 @@ ros2 param list /path_planner_node
   # 45번 라인
   obstacle_cluster_distance: 0.2  # 0.15 → 0.2 (더 쉽게 클러스터링)
 
+--- wall detection vs obstacle detection
+● path_planner의 obstacle과 wall 처리를 분석했습니다. 상세한 비교를 제공하겠습니다.
+
+  ---
+  📊 Obstacle vs Wall 비교
+
+  1. 분류 기준 (path_planner_node.cpp:1184)
+
+  // Line 1184: 크기 기준으로 분류
+  if (size > obstacle_max_box_size) {
+      // WALL: 큰 클러스터 → 선분으로 분할
+  } else {
+      // OBSTACLE: 작은 클러스터 → 박스로 처리
+  }
+
+  파라미터: obstacle_max_box_size: 0.8m (현재 설정)
+  - size ≤ 0.8m → Obstacle (동적 장애물, 콘, 차량 등)
+  - size > 0.8m → Wall (벽, 트랙 경계 등)
+
+  ---
+  2. 처리 방식 차이
+
+  Obstacle 처리:
+
+  // 1. 박스 생성 (createBoundingBoxes)
+  ObstacleBox box;
+  box.center_x, box.center_y  // 중심 좌표
+  box.size = max(width, height) + safety_margin
+
+  // 2. 박스 경계 샘플링 (Line 1229-1240)
+  // 박스의 4면을 points_per_side로 샘플링
+  for (int i = 0; i < points_per_side; ++i) {
+      // 상/하/좌/우 면 각각 샘플링
+  }
+
+  특징:
+  - Square bounding box 생성
+  - Safety margin 추가 (obstacle_box_safety_margin: 0.2m)
+  - 4면 균등 샘플링 (총 4 × points_per_side 개 점)
+  - 빨간색 박스로 시각화
+
+  Wall 처리:
+
+  // 1. 짧은 선분으로 분할 (breakWallIntoSegments)
+  WallSegment seg;
+  seg.x1, seg.y1, seg.x2, seg.y2  // 시작/끝 좌표
+  seg.width = wall_segment_width
+
+  // 2. 선분 경계 샘플링 (Line 1248-1278)
+  // 각 선분의 길이 방향 × 폭 방향 샘플링
+  for (int i = 0; i < points_per_segment; ++i) {
+      for (int j = 0; j < width_samples; ++j) {
+          // 선분을 따라 균등하게 점 배치
+      }
+  }
+
+  특징:
+  - Line segment 분할 (wall_segment_length: 0.7m)
+  - Perpendicular width 적용 (wall_segment_width: 0.3m)
+  - Distance filtering (max_wall_distance: 15.0m 넘으면 무시)
+  - Segment limit (max_wall_segments: 30 최대 개수)
+  - 파란색 선분으로 시각화
+
+  ---
+  3. Frenet Planner에 미치는 영향
+
+  ⚠️ 중요: 둘 다 동일하게 처리됨!
+
+  Obstacle과 Wall 모두 동일한 obstacles 벡터로 Frenet planner에 전달됩니다
+  (path_planner_node.cpp:1324):
+
+  auto cands = frenet_->generate(fs, obstacles);
+
+  Two-Zone Cost Model (frenet.cpp:493-539):
+
+  Zone 1: Collision Zone (즉시 거부)
+
+  // Line 502-504: 속도에 따라 동적 안전 거리 계산
+  double dynamic_safety = max(min_safety_margin,
+                              safety_radius + vehicle_radius + obstacle_radius +
+                              k_velocity_safety * current_velocity);
+
+  // Line 515: 충돌 체크
+  if (dist < dynamic_safety) {
+      tr.collision = true;  // 경로 즉시 거부
+  }
+
+  Zone 2: Warning Zone (선형 페널티)
+
+  // Line 525-532: 경고 구역 비용 계산
+  if (dist < warning_distance) {
+      double margin = dist - dynamic_safety;
+      double warning_range = warning_distance - dynamic_safety;
+      double penalty_factor = 1.0 - (margin / warning_range);
+      proximity_cost += penalty_factor;
+  }
+
+  Zone 3: Safe Zone (비용 없음)
+
+  // Line 538: warning_distance 이상이면 비용 없음
+  // dist >= warning_distance → NO COST
+
+  Total Cost (Line 597-598):
+
+  tr.cost = k_j * jerk + k_t * time + k_d * deviation + k_v * velocity_error +
+            warning_cost * proximity_cost;
+
+  ---
+  🎯 Obstacle 관련 주요 파라미터
+
+  A. Obstacle Detection & Clustering
+
+  # 클러스터링 거리 (스캔 포인트를 그룹화)
+  obstacle_cluster_distance: 0.15      # 0.15m 이내 → 같은 클러스터
+                                        # ↓ 작을수록: 더 세밀한 분리
+                                        # ↑ 클수록: 더 큰 클러스터
+
+  # Obstacle vs Wall 구분 기준
+  obstacle_max_box_size: 0.8           # 0.8m 이하 → Obstacle
+                                        # ↓ 작을수록: 더 많이 Wall로 분류
+                                        # ↑ 클수록: 더 많이 Obstacle로 분류
+
+  # Obstacle 박스 안전 마진
+  obstacle_box_safety_margin: 0.2      # 박스 크기에 +0.2m 추가
+                                        # ↑ 클수록: 더 큰 회피 거리
+
+  B. Performance Optimization
+
+  # 스캔 다운샘플링 (성능 최적화)
+  scan_downsample_factor: 7            # 7개 중 1개만 사용
+                                        # ↑ 클수록: 빠르지만 정확도 ↓
+
+  # Obstacle 박스 샘플링
+  obstacle_points_per_side: 3          # 박스 한 면당 3개 점
+                                        # Total: 4면 × 3 = 12개 점
+                                        # ↑ 클수록: 정확하지만 느림
+
+  # 처리 제한
+  max_obstacles_to_process: 5          # 최대 5개 obstacle만 처리
+                                        # ↑ 클수록: 많은 장애물 인식
+  enable_obstacle_clustering: true     # false면 클러스터링 스킵
+  enable_path_filtering: false         # 경로 주변 필터링 (현재 비활성화)
+
+  C. Frenet Safety Parameters (충돌 회피 거리)
+
+  # Dynamic Safety Distance 계산:
+  # safety = max(min_safety_margin, 
+  #              safety_radius + vehicle_radius + obstacle_radius + k_velocity_safety * v)
+
+  frenet_safety_radius: 0.10           # 기본 안전 반경
+  frenet_vehicle_radius: 0.10          # 차량 반경 (F1TENTH width ~0.2m)
+  frenet_obstacle_radius: 0.10         # 장애물 예상 반경
+  frenet_k_velocity_safety: 0.05       # 속도 의존 게인
+  frenet_min_safety_margin: 0.00       # 최소 안전 마진
+
+  # 예시: 3 m/s에서
+  # safety = max(0.00, 0.10 + 0.10 + 0.10 + 0.05*3) = 0.45m
+
+  D. Two-Zone Cost Model (경고 구역)
+
+  frenet_warning_distance: 0.5         # 경고 구역 외부 거리
+                                        # ↑ 클수록: 더 먼 거리에서 회피
+                                        # ↓ 작을수록: 더 가까이 접근 허용
+
+  frenet_warning_cost: 7.0             # 경고 구역 비용 가중치
+                                        # ↑ 클수록: 장애물 회피 강화
+                                        # ↓ 작을수록: 회피 약화
+
+  # Cost = k_jerk * jerk + k_time * time + k_deviation * dev + 
+  #        k_velocity * v_err + warning_cost * proximity_cost
+  frenet_k_jerk: 0.3                   # Jerk (부드러움)
+  frenet_k_time: 0.1                   # 시간 (빠른 경로)
+  frenet_k_deviation: 1.5              # 중심선 이탈 (높음 → 중심 선호)
+  frenet_k_velocity: 1.0               # 속도 오차
+
+  E. Wall-Specific Parameters
+
+  # Wall 처리 (Obstacle와 구분)
+  wall_segment_length: 0.7             # 벽을 0.7m 선분으로 분할
+  wall_segment_width: 0.3              # 선분 폭 (수직 방향)
+  max_wall_distance: 15.0              # 15m 이상 벽 무시
+  max_wall_segments: 30                # 최대 30개 선분만 생성
+  wall_point_downsample: 3             # 벽 클러스터 1/3만 사용
+
+  ---
+  🔧 튜닝 가이드
+
+  Obstacle 회피를 강화하려면:
+
+  # 1. 더 넓은 안전 거리
+  frenet_warning_distance: 0.7  # 0.5 → 0.7
+  frenet_vehicle_radius: 0.15   # 0.10 → 0.15
+
+  # 2. 더 강한 회피 비용
+  frenet_warning_cost: 10.0     # 7.0 → 10.0
+
+  # 3. 중심선 선호도 증가
+  frenet_k_deviation: 2.0       # 1.5 → 2.0
+
+  Obstacle 회피를 약화하려면:
+
+  # 1. 더 좁은 안전 거리
+  frenet_warning_distance: 0.3  # 0.5 → 0.3
+
+  # 2. 더 약한 회피 비용
+  frenet_warning_cost: 3.0      # 7.0 → 3.0
+
+  # 3. 중심선 선호도 감소
+  frenet_k_deviation: 0.8       # 1.5 → 0.8
+
+  ---
+  📈 현재 설정 분석 (planner_params.yaml)
+
+  # Obstacle Detection
+  obstacle_cluster_distance: 0.15      # ✅ 적절 (세밀한 분리)
+  obstacle_max_box_size: 0.8           # ✅ 적절 (0.8m 기준)
+  obstacle_box_safety_margin: 0.2      # ✅ 적절 (안전 마진)
+
+  # Safety Parameters
+  frenet_vehicle_radius: 0.10          # ⚠️ 낮음 (차량 폭 ~0.2m)
+  frenet_obstacle_radius: 0.10         # ✅ 적절
+  frenet_k_velocity_safety: 0.05       # ⚠️ 낮음 (고속에서 위험)
+  frenet_min_safety_margin: 0.00       # ⚠️ 매우 낮음!
+
+  # Warning Zone
+  frenet_warning_distance: 0.5         # ⚠️ 낮음 (회피가 늦을 수 있음)
+  frenet_warning_cost: 7.0             # ✅ 적절 (중간 강도)
+
+  권장 개선:
+  frenet_vehicle_radius: 0.15          # 0.10 → 0.15
+  frenet_k_velocity_safety: 0.1        # 0.05 → 0.1
+  frenet_min_safety_margin: 0.1        # 0.00 → 0.1
+  frenet_warning_distance: 0.7         # 0.5 → 0.7
+
+  설정을 변경하시겠습니까?
+

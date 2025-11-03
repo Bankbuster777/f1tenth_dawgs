@@ -1,35 +1,11 @@
 path_tracker_node:
   ros__parameters:
-    # History
-    # Debug speed_gain: 0.35  0.4   0.2   0.5
-    # lookahead_base:   0.25  0.25  0.3   0.2
-    # lookahead_k:      0.07  0.05  0.1   0.04
-    # forward_tracking: 3.5   3.5   3.5   3.5
-    # Assessment:       ok    ok    ok    ?
-
-    # ============================================================================
-    # DEBUG MODE PARAMETERS
-    # ============================================================================
-
-    debug_mode: true           # Enable debug mode for testing
-                                # EFFECT: If true, applies velocity_gain to limit speed
-                                # USE: Set false for racing, true for tuning
-
-    velocity_gain: 0.5          # Speed multiplier in debug mode (0.0-1.0)
-                                 # EFFECT: actual_speed = target_speed * velocity_gain
-                                 # EXAMPLE: 0.3 = 30% speed for safe tuning
-                                 # NOTE: Only applies when debug_mode = true
-
-    debug_min_speed: 0.6        # Minimum speed in debug mode [m/s]
-                                 # EFFECT: Overrides min_speed_limit when debug_mode = true
-                                 # SAFETY: Prevents too slow movement during testing
-
     # ============================================================================
     # PURE PURSUIT PARAMETERS
     # ============================================================================
     # Pure pursuit finds a "lookahead point" ahead on the path and steers towards it
 
-    lookahead_base: 0.2         # Base lookahead distance [m]
+    lookahead_base: 0.25         # Base lookahead distance [m]
                                  # EFFECT: Larger = smoother but slower response, cuts corners more
                                  #         Smaller = sharper turns but oscillation risk
                                  # TYPICAL: 0.3-1.0m for F1TENTH scale
@@ -38,7 +14,7 @@ path_tracker_node:
                                  # EFFECT: If false, uses constant lookahead_base
                                  #         If true, adapts lookahead based on speed
 
-    lookahead_k: 0.03            # Speed-dependent lookahead gain
+    lookahead_k: 0.07            # Speed-dependent lookahead gain
                                  # EFFECT: L = lookahead_base + lookahead_k * speed
                                  #         Increases lookahead at higher speeds for stability
                                  # TYPICAL: 0.2-0.5
@@ -155,7 +131,7 @@ path_tracker_node:
                                   #   - Standard particle filter at 50-100Hz
                                   #   - May cause issues if vehicle deviates significantly
 
-    forward_search_range: 3.5    # Forward search range [m] from last target
+    forward_search_range: 3.0    # Forward search range [m] from last target
                                   # EFFECT: Defines how far ahead to look for next target
                                   # FORMULA: search_window = forward_search_range / 0.1
                                   #          (0.1m = path interpolation resolution)
@@ -192,6 +168,22 @@ path_tracker_node:
                                  # EFFECT: If path_planner stops publishing, maintains last command for 1s
                                  # SAFETY: Prevents runaway if planning fails
 
+    # ============================================================================
+    # DEBUG MODE PARAMETERS
+    # ============================================================================
+
+    debug_mode: true           # Enable debug mode for testing
+                                # EFFECT: If true, applies velocity_gain to limit speed
+                                # USE: Set false for racing, true for tuning
+
+    velocity_gain: 0.35          # Speed multiplier in debug mode (0.0-1.0)
+                                 # EFFECT: actual_speed = target_speed * velocity_gain
+                                 # EXAMPLE: 0.3 = 30% speed for safe tuning
+                                 # NOTE: Only applies when debug_mode = true
+
+    debug_min_speed: 0.6        # Minimum speed in debug mode [m/s]
+                                 # EFFECT: Overrides min_speed_limit when debug_mode = true
+                                 # SAFETY: Prevents too slow movement during testing
 
     # ============================================================================
     # SIMULATION MODE PARAMETERS
@@ -231,7 +223,7 @@ path_tracker_node:
     # ============================================================================
     # Used when speed_mode = "curvature" or "optimize"
 
-    friction_coeff: 0.9         # Friction coefficient (mu) for lateral grip
+    friction_coeff: 0.8         # Friction coefficient (mu) for lateral grip
                                  # EFFECT: v_max = sqrt(mu * g * R)
                                  #         Higher mu = higher cornering speed
                                  # TYPICAL: 0.8-1.0 for good track surface
@@ -255,7 +247,7 @@ path_tracker_node:
                                      #         If true, uses weighted average
                                      # BENEFIT: Smoother speed profile with tunable balance
 
-    optimize_path_weight: 0.2        # Weight for path_velocity [0.0-1.0]
+    optimize_path_weight: 0.1        # Weight for path_velocity [0.0-1.0]
                                      # EFFECT: Higher = trust path velocity more
                                      # FORMULA: speed = w_path * v_path + w_curv * v_curv
                                      # TUNING:
@@ -263,7 +255,7 @@ path_tracker_node:
                                      #   - 0.5: Equal balance
                                      #   - 0.2-0.3: Prioritize geometric safety
 
-    optimize_curv_weight: 0.8        # Weight for curvature speed [0.0-1.0]
+    optimize_curv_weight: 0.9        # Weight for curvature speed [0.0-1.0]
                                      # EFFECT: Higher = trust curvature-based speed more
                                      # NOTE: Weights are automatically normalized to sum to 1.0
                                      # EXAMPLE: path_weight=0.7, curv_weight=0.3
