@@ -6,7 +6,7 @@ path_planner_node:
     # Pre-conditions
     #   - check base_system(f1tenth) map
     #   - run speedopt or global_planner_offline
-    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1030/mohyun_slam_v3_iqp.csv"
+    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf_iqp.csv"
     # "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/icheon/icheon1009_map_lippboyd_speedopted.csv"
 
 
@@ -187,7 +187,7 @@ path_planner_node:
     adaptive_compensation: true  # Enable adaptive computation time estimation
 
     # Simulation mode parameter
-    sim_mode: false             # Enable simulation mode
+    sim_mode: true             # Enable simulation mode
     sim_odom: "/ego_racecar/odom"
 
     # Topics

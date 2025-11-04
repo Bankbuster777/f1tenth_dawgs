@@ -13,6 +13,7 @@ Panels:
         - /MarkerArray4/Topic1
         - /Marker1
         - /Marker1/Topic1
+        - /Marker2
       Splitter Ratio: 0.5794117450714111
     Tree Height: 785
   - Class: rviz_common/Selection
@@ -476,6 +477,30 @@ Visualization Manager:
         Reliability Policy: Best Effort
         Value: /lookahead_point
       Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        recorded_path_triangles: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /path_recorder/recorded_path
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /path_recorder/error_visualization
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -517,25 +542,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 26.351795196533203
+      Distance: 18.705944061279297
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -3.9407002925872803
-        Y: 1.7544646263122559
-        Z: -0.6230512261390686
+        X: 0.952608048915863
+        Y: 2.1237916946411133
+        Z: -0.6684192419052124
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 1.4847962856292725
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.263600826263428
+      Yaw: 6.2686004638671875
     Saved: ~
 Window Geometry:
   Displays:
@@ -551,5 +576,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 849
-  X: 194
+  X: 111
   Y: 29

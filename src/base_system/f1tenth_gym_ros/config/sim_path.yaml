@@ -42,7 +42,7 @@ bridge:
     scan_beams: 1080
 
     # map parameters
-    map_path: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1028/mohyun_slam_ekf'
+    map_path: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf'
     # '/home/dawgs_nx/f1tenth_dawgs/src/base_system/f1tenth_gym_ros/maps/icheon/icheon1009_map'
     map_img_ext: '.png'
 

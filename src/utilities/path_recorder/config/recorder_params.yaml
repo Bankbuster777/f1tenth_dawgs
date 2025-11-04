@@ -18,3 +18,18 @@ path_recorder_node:
     triangle_spacing: 0.2      # Distance between triangles (meters)
     min_speed: 0.0             # Minimum speed for color mapping (m/s)
     max_speed: 8.0             # Maximum speed for color mapping (m/s)
+
+offline_analysis_node:
+  ros__parameters:
+    # Map and path configuration (should match path_planner settings)
+    global_path_csv: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1103/mohyun_slam_ekf_v2_iqp_modified.csv'
+    map_yaml: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1103/mohyun_slam_ekf_v2.yaml'
+
+    # CSV recording files to analyze
+    csv_directory: '/home/dawgs_nx/f1tenth_dawgs/src/utilities/path_recorder/data'
+    csv_file: ''  # Specific file to analyze (empty = most recent in csv_directory)
+
+    # Output configuration
+    output_directory: '/home/dawgs_nx/f1tenth_dawgs/src/utilities/path_recorder/data'
+    save_plots: true
+    show_plots: true

@@ -9,18 +9,18 @@ global_planner_offline_node:
     # map_dir: "/home/dawgs_nx/forza_ws/src/race_stack/planner/global_planner/maps/levine"
     # map_name: "Budapest_map"
     # map_dir: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/racetracks/Budapest"
-    map_name: "mohyun_slam_ekf"
-    map_dir: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1030/"
+    map_name: "songdo_slam_ekf"
+    map_dir: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/"
     # /home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/icheon/map_1009v3_20251009_224402.png
 
     # === TRAJECTORY OPTIMIZATION PARAMETERS ===
     # Safety width for IQP (iterative quadratic programming) trajectory
     # Smaller values allow tighter racing lines but less safety margin
-    safety_width: 1.1      # meters
+    safety_width: 1.2      # meters
 
     # Safety width for shortest path trajectory (used for overtaking)
     # Generally smaller than IQP safety width
-    safety_width_sp: 1.1     # meters
+    safety_width_sp: 1.2     # meters
 
 
     # === TRACK AND CENTERLINE SETTINGS ===
