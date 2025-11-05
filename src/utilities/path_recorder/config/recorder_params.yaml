@@ -22,8 +22,8 @@ path_recorder_node:
 offline_analysis_node:
   ros__parameters:
     # Map and path configuration (should match path_planner settings)
-    global_path_csv: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1103/mohyun_slam_ekf_v2_iqp_modified.csv'
-    map_yaml: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1103/mohyun_slam_ekf_v2.yaml'
+    global_path_csv: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf.csv'
+    map_yaml: '/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf.yaml'
 
     # CSV recording files to analyze
     csv_directory: '/home/dawgs_nx/f1tenth_dawgs/src/utilities/path_recorder/data'

@@ -16,11 +16,11 @@ global_planner_offline_node:
     # === TRAJECTORY OPTIMIZATION PARAMETERS ===
     # Safety width for IQP (iterative quadratic programming) trajectory
     # Smaller values allow tighter racing lines but less safety margin
-    safety_width: 1.2      # meters
+    safety_width: 1.4      # meters
 
     # Safety width for shortest path trajectory (used for overtaking)
     # Generally smaller than IQP safety width
-    safety_width_sp: 1.2     # meters
+    safety_width_sp: 1.4     # meters
 
 
     # === TRACK AND CENTERLINE SETTINGS ===
@@ -34,7 +34,7 @@ global_planner_offline_node:
 
     # Show matplotlib plots during trajectory generation
     # Set to false for automated/batch processing
-    show_plots: true
+    show_plots: false
 
 
     # === GLOBAL TRAJECTORY SETTINGS ===

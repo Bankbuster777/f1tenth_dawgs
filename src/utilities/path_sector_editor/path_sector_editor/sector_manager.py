@@ -6,8 +6,9 @@ Handles CSV loading/saving, sector definitions, and path modifications
 
 import numpy as np
 import csv
+import copy
 from typing import List, Tuple, Dict, Optional
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
@@ -22,16 +23,29 @@ class Sector:
     color: str = 'blue'
 
 
+@dataclass
+class UndoState:
+    """Snapshot of manager state for undo functionality"""
+    sectors: List[Sector]
+    modified_waypoints: np.ndarray
+    sector_counter: int
+    selected_sector_name: Optional[str] = None
+
+
 class SectorManager:
     """Manages sectors and path modifications"""
 
-    def __init__(self, smooth_transition_points: int = 20):
+    def __init__(self, smooth_transition_points: int = 20, max_undo_history: int = 50):
         self.waypoints = None  # (N, 4) array: [x, y, v, kappa]
         self.sectors: List[Sector] = []
         self.file_path: Optional[str] = None
         self.modified_waypoints = None
         self.smooth_transition_points = smooth_transition_points
         self.sector_counter = 0  # Auto-naming counter
+
+        # Undo functionality
+        self.undo_history: List[UndoState] = []
+        self.max_undo_history = max_undo_history
 
     def load_csv(self, file_path: str) -> bool:
         """Load waypoints from CSV file (x, y, v, kappa)"""
@@ -219,3 +233,70 @@ class SectorManager:
             np.min(self.waypoints[:, 1]),
             np.max(self.waypoints[:, 1])
         )
+
+    def save_state(self, selected_sector: Optional[Sector] = None):
+        """
+        Save current state to undo history
+
+        Args:
+            selected_sector: Currently selected sector (optional)
+        """
+        if self.waypoints is None:
+            return
+
+        # Create deep copy of sectors
+        sectors_copy = copy.deepcopy(self.sectors)
+
+        # Copy waypoints
+        waypoints_copy = self.modified_waypoints.copy() if self.modified_waypoints is not None else None
+
+        # Get selected sector name
+        selected_name = selected_sector.name if selected_sector else None
+
+        # Create state snapshot
+        state = UndoState(
+            sectors=sectors_copy,
+            modified_waypoints=waypoints_copy,
+            sector_counter=self.sector_counter,
+            selected_sector_name=selected_name
+        )
+
+        # Add to history
+        self.undo_history.append(state)
+
+        # Limit history size (FIFO)
+        if len(self.undo_history) > self.max_undo_history:
+            self.undo_history.pop(0)
+
+        print(f"State saved (history size: {len(self.undo_history)})")
+
+    def undo(self) -> Tuple[bool, Optional[str]]:
+        """
+        Restore previous state from undo history
+
+        Returns:
+            Tuple of (success, selected_sector_name)
+        """
+        if len(self.undo_history) == 0:
+            print("No undo history available")
+            return False, None
+
+        # Pop last state
+        state = self.undo_history.pop()
+
+        # Restore state
+        self.sectors = copy.deepcopy(state.sectors)
+        self.modified_waypoints = state.modified_waypoints.copy() if state.modified_waypoints is not None else None
+        self.sector_counter = state.sector_counter
+
+        print(f"Undo successful (history size: {len(self.undo_history)})")
+        return True, state.selected_sector_name
+
+    def can_undo(self) -> bool:
+        """Check if undo is available"""
+        return len(self.undo_history) > 0
+
+    def clear_undo_history(self):
+        """Clear all undo history"""
+        self.undo_history.clear()
+        print("Undo history cleared")

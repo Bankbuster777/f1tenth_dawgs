@@ -1,0 +1,7 @@
+Path Recording Summary
+============================================================
+Total points: 1043
+Average lateral error: -138.44 cm
+Std deviation: 126.34 cm
+Min lateral error: -333.66 cm
+Max lateral error: 149.74 cm

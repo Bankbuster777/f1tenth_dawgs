@@ -8,7 +8,7 @@ def generate_launch_description():
     # Declare arguments
     csv_file_arg = DeclareLaunchArgument(
         'csv_file',
-        default_value='/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1017/mohyun_1017_2map_iqp_0.35.csv',
+        default_value='/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf_iqp.csv',
         description='Path to racing path CSV file'
     )
 
@@ -20,13 +20,13 @@ def generate_launch_description():
 
     map_image_arg = DeclareLaunchArgument(
         'map_image',
-        default_value='/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1017/mohyun_1017_2map.pgm',
+        default_value='/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf.pgm',
         description='Path to map image file (pgm/png)'
     )
 
     map_yaml_arg = DeclareLaunchArgument(
         'map_yaml',
-        default_value='/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1017/mohyun_1017_2map.yaml',
+        default_value='/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf.yaml',
         description='Path to map YAML file with origin/resolution info'
     )
 
@@ -37,10 +37,10 @@ def generate_launch_description():
         name='path_editor',
         output='screen',
         parameters=[{
-            'csv_file_path': LaunchConfiguration('csv_file'),
+            'csv_file': LaunchConfiguration('csv_file'),
             'frame_id': LaunchConfiguration('frame_id'),
-            'map_image_path': LaunchConfiguration('map_image'),
-            'map_yaml_path': LaunchConfiguration('map_yaml'),
+            'map_image': LaunchConfiguration('map_image'),
+            'map_yaml': LaunchConfiguration('map_yaml')
         }]
     )
 

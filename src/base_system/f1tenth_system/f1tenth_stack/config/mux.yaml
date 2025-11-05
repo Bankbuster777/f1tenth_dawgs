@@ -1,5 +1,11 @@
 ackermann_mux:
   ros__parameters:
+    # Brake handling parameters
+    enable_brake: false
+    deceleration_threshold: 0.8
+    brake_gain: 500.0
+    max_brake_current: 20000.0
+
     topics:
       navigation:
         topic   : drive

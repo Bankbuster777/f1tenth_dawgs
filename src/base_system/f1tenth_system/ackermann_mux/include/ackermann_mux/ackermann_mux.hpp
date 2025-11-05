@@ -38,6 +38,7 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/bool.hpp>
+#include <std_msgs/msg/float64.hpp>
 #include <ackermann_msgs/msg/ackermann_drive_stamped.hpp>
 
 #include <list>
@@ -96,8 +97,15 @@ protected:
   std::shared_ptr<lock_topic_container> lock_hs_;
 
   rclcpp::Publisher<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr cmd_pub_;
+  rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr brake_pub_;
 
   ackermann_msgs::msg::AckermannDriveStamped last_cmd_;
+
+  // Brake handling parameters
+  bool enable_brake_;
+  double deceleration_threshold_;
+  double brake_gain_;
+  double max_brake_current_;
 
   template<typename T>
   void getTopicHandles(const std::string & param_name, handle_container<T> & topic_hs);

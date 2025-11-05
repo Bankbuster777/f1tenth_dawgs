@@ -6,14 +6,14 @@ path_planner_node:
     # Pre-conditions
     #   - check base_system(f1tenth) map
     #   - run speedopt or global_planner_offline
-    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf_iqp.csv"
+    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf_iqp_modified.csv"
     # "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/icheon/icheon1009_map_lippboyd_speedopted.csv"
 
 
     # Planner settings
     use_lattice: false              # DISABLED: Lattice causes planned_path to diverge from frenet_path
     use_frenet: true
-    planner_horizon: 5.0
+    planner_horizon: 6.0
 
     # Path smooting
     enable_path_smooting: true
@@ -30,7 +30,7 @@ path_planner_node:
 
     # Lateral sampling (distance from centerline in meters)
     # NARROW RANGE: Reduced to ±1.0m for tighter obstacle avoidance
-    frenet_d_samples: [-1.0, -0.6, -0.3, 0.0, 0.3, 0.6, 1.0]
+    frenet_d_samples: [-1.3, -0.8, -0.4, 0.0, 0.4, 0.8, 1.3]
 
     # Time horizon samples (in seconds)
     frenet_t_samples: [1.0, 1.5, 2.0, 2.5]
@@ -38,13 +38,13 @@ path_planner_node:
     # Cost function weights
     frenet_k_jerk: 0.3       # Jerk (smoothness) weight
     frenet_k_time: 0.1       # Time weight (prefer faster trajectories)
-    frenet_k_deviation: 1.5  # INCREASED: Higher centerline preference to reduce avoidance distance
-    frenet_k_velocity: 1.0   # Velocity error weight
+    frenet_k_deviation: 1.4  # INCREASED: Higher centerline preference to reduce avoidance distance
+    frenet_k_velocity: 1.1   # Velocity error weight
 
     # Obstacle detection parameters
-    obstacle_cluster_distance: 0.15      # Clustering distance for grouping scan points [m]
+    obstacle_cluster_distance: 0.1      # Clustering distance for grouping scan points [m]
     obstacle_max_box_size: 0.8          # Max size for obstacle boxes; larger clusters = walls [m]
-    obstacle_box_safety_margin: 0.2     # Safety margin around detected obstacles [m]
+    obstacle_box_safety_margin: 0.3     # Safety margin around detected obstacles [m]
 
     # Wall detection parameters (walls modeled as line segments instead of boxes)
     wall_segment_length: 0.7            # Break walls into 0.5m segments [m]
@@ -53,7 +53,7 @@ path_planner_node:
 
     # Performance optimization parameters
     # Scan processing
-    scan_downsample_factor: 7           # Use every Nth scan point (3=1/3 points, 5=1/5 points) - Higher = faster but less accurate
+    scan_downsample_factor: 5           # Use every Nth scan point (3=1/3 points, 5=1/5 points) - Higher = faster but less accurate
 
     # Detection toggles (disable for maximum performance)
     enable_obstacle_detection: true     # Toggle obstacle detection on/off - Set false to skip all obstacle processing
@@ -62,8 +62,8 @@ path_planner_node:
     # Obstacle processing optimization
     enable_obstacle_clustering: true    # If false, skip obstacle box creation entirely - Saves clustering computation
     enable_path_filtering: false         # Filter scan points near global path - Set false to skip (faster but may detect path as obstacle)
-    obstacle_points_per_side: 3         # Points sampled per box side (6=24 points, 3=12 points) - Reduce for speed
-    max_obstacles_to_process: 5         # Maximum number of obstacles to process - Cap to limit computation time
+    obstacle_points_per_side: 4         # Points sampled per box side (6=24 points, 3=12 points) - Reduce for speed
+    max_obstacles_to_process: 8         # Maximum number of obstacles to process - Cap to limit computation time
 
     # Wall processing optimization (SIGNIFICANT PERFORMANCE IMPACT)
     # =============================================================================
@@ -187,7 +187,7 @@ path_planner_node:
     adaptive_compensation: true  # Enable adaptive computation time estimation
 
     # Simulation mode parameter
-    sim_mode: true             # Enable simulation mode
+    sim_mode: false             # Enable simulation mode
     sim_odom: "/ego_racecar/odom"
 
     # Topics

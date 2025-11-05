@@ -31,6 +31,7 @@ class SectorTunerNode(Node):
         self.declare_parameter('csv_file_path', '')
         self.declare_parameter('map_yaml_path', '')
         self.declare_parameter('smooth_transition_points', 20)
+        self.declare_parameter('max_undo_history', 50)
         self.declare_parameter('global_path_topic', '/global_centerline')
         self.declare_parameter('frame_id', 'map')
         self.declare_parameter('publish_rate', 1.0)
@@ -39,6 +40,7 @@ class SectorTunerNode(Node):
         self.csv_path = self.get_parameter('csv_file_path').value
         self.map_yaml_path = self.get_parameter('map_yaml_path').value
         smooth_points = self.get_parameter('smooth_transition_points').value
+        max_undo = self.get_parameter('max_undo_history').value
         path_topic = self.get_parameter('global_path_topic').value
         self.frame_id = self.get_parameter('frame_id').value
         pub_rate = self.get_parameter('publish_rate').value
@@ -55,8 +57,8 @@ class SectorTunerNode(Node):
         # Timer for publishing
         self.timer = self.create_timer(1.0 / pub_rate, self.publish_path)
 
-        # Sector manager with smoothing parameter
-        self.manager = SectorManager(smooth_transition_points=smooth_points)
+        # Sector manager with smoothing parameter and undo history
+        self.manager = SectorManager(smooth_transition_points=smooth_points, max_undo_history=max_undo)
 
         # GUI state
         self.selecting_sector = False
@@ -73,6 +75,7 @@ class SectorTunerNode(Node):
         self.get_logger().info(f"Path Sector Editor Node started")
         self.get_logger().info(f"Publishing to: {path_topic}")
         self.get_logger().info(f"Smooth transition points: {smooth_points}")
+        self.get_logger().info(f"Max undo history: {max_undo}")
 
         # Load map metadata from yaml and then load image
         if self.map_yaml_path:
@@ -215,6 +218,10 @@ class SectorTunerNode(Node):
             "1. Click sector to select\n"
             "2. Adjust sliders\n"
             "3. Click 'Apply'\n\n"
+            "UNDO:\n"
+            "• Undo last operation\n"
+            "  (Add/Delete/Apply/\n"
+            "   Reset/Clear)\n\n"
             "SMOOTHING:\n"
             "• Transition Points:\n"
             "  smooth connection\n"
@@ -283,13 +290,20 @@ class SectorTunerNode(Node):
 
         button_y -= (button_height + 0.01)
 
+        # Undo button
+        ax_undo = plt.axes([button_x1, button_y, button_width, button_height])
+        self.btn_undo = Button(ax_undo, 'Undo', color='lightgray')
+        self.btn_undo.on_clicked(self.on_undo)
+
         # Save button
-        ax_save = plt.axes([button_x1, button_y, button_width, button_height])
+        ax_save = plt.axes([button_x2, button_y, button_width, button_height])
         self.btn_save = Button(ax_save, 'Save CSV', color='lightgreen')
         self.btn_save.on_clicked(self.on_save)
 
+        button_y -= (button_height + 0.01)
+
         # Clear sectors button
-        ax_clear = plt.axes([button_x2, button_y, button_width, button_height])
+        ax_clear = plt.axes([button_x1, button_y, button_width, button_height])
         self.btn_clear = Button(ax_clear, 'Clear All', color='lightcoral')
         self.btn_clear.on_clicked(self.on_clear_sectors)
 
@@ -487,6 +501,9 @@ class SectorTunerNode(Node):
                 # Second click - end point (auto-create with generated name)
                 self.sector_end_idx = clicked_idx
 
+                # Save state before creating new sector
+                self.manager.save_state(self.selected_sector)
+
                 # Automatically create sector with generated name
                 sector = self.manager.add_sector(None, self.sector_start_idx, self.sector_end_idx)
                 self.selected_sector = sector
@@ -497,6 +514,7 @@ class SectorTunerNode(Node):
                 self.sector_end_idx = None
 
                 self.update_status(f"Created: {sector.name}")
+                self.update_undo_button_color()
                 self.update_plot()
                 self.get_logger().info(f"Created sector: {sector.name}")
 
@@ -513,10 +531,14 @@ class SectorTunerNode(Node):
     def on_delete_sector(self, event):
         """Delete selected sector"""
         if self.selected_sector:
+            # Save state before deletion
+            self.manager.save_state(self.selected_sector)
+
             sector_name = self.selected_sector.name
             self.manager.remove_sector(self.selected_sector)
             self.selected_sector = None
             self.update_status(f"Deleted: {sector_name}")
+            self.update_undo_button_color()
             self.update_plot()
         else:
             self.update_status("No sector selected")
@@ -524,12 +546,16 @@ class SectorTunerNode(Node):
     def on_apply(self, event):
         """Apply current slider values to selected sector"""
         if self.selected_sector:
+            # Save state before applying modifications
+            self.manager.save_state(self.selected_sector)
+
             self.selected_sector.velocity_scale = self.slider_vel_scale.val
             self.selected_sector.velocity_offset = self.slider_vel_offset.val
             self.selected_sector.d_offset = self.slider_d_offset.val
 
             self.manager.apply_modifications()
             self.update_status(f"Applied: {self.selected_sector.name}")
+            self.update_undo_button_color()
             self.update_plot()
             self.get_logger().info(f"Applied changes to: {self.selected_sector.name}")
         else:
@@ -537,6 +563,9 @@ class SectorTunerNode(Node):
 
     def on_reset(self, event):
         """Reset all modifications"""
+        # Save state before reset
+        self.manager.save_state(self.selected_sector)
+
         self.manager.modified_waypoints = self.manager.waypoints.copy()
         for sector in self.manager.sectors:
             sector.velocity_scale = 1.0
@@ -544,8 +573,32 @@ class SectorTunerNode(Node):
             sector.d_offset = 0.0
         self.update_sliders_from_sector(None)
         self.update_status("Reset all")
+        self.update_undo_button_color()
         self.update_plot()
         self.get_logger().info("Reset all modifications")
+
+    def on_undo(self, event):
+        """Undo last operation"""
+        success, selected_name = self.manager.undo()
+
+        if success:
+            # Restore selected sector by name
+            self.selected_sector = None
+            if selected_name:
+                for sector in self.manager.sectors:
+                    if sector.name == selected_name:
+                        self.selected_sector = sector
+                        break
+
+            # Update sliders to match restored sector
+            self.update_sliders_from_sector(self.selected_sector)
+
+            self.update_status("Undo successful")
+            self.update_undo_button_color()
+            self.update_plot()
+            self.get_logger().info("Undo operation completed")
+        else:
+            self.update_status("Nothing to undo")
 
     def on_save(self, event):
         """Save modified path to CSV"""
@@ -557,11 +610,15 @@ class SectorTunerNode(Node):
 
     def on_clear_sectors(self, event):
         """Clear all sectors"""
+        # Save state before clearing
+        self.manager.save_state(self.selected_sector)
+
         self.manager.clear_sectors()
         self.manager.sector_counter = 0  # Reset counter
         self.selected_sector = None
         self.manager.modified_waypoints = self.manager.waypoints.copy()
         self.update_status("Cleared all sectors")
+        self.update_undo_button_color()
         self.update_plot()
 
     def update_sliders_from_sector(self, sector: Optional[Sector]):
@@ -574,6 +631,14 @@ class SectorTunerNode(Node):
             self.slider_vel_scale.set_val(1.0)
             self.slider_vel_offset.set_val(0.0)
             self.slider_d_offset.set_val(0.0)
+
+    def update_undo_button_color(self):
+        """Update undo button color based on availability"""
+        if self.manager.can_undo():
+            self.btn_undo.color = 'lightblue'
+        else:
+            self.btn_undo.color = 'lightgray'
+        self.fig.canvas.draw_idle()
 
 
 def main(args=None):

@@ -94,6 +94,44 @@ void AckermannMux::init()
     "ackermann_cmd",
     qos);
 
+  /// Brake handling parameters:
+  // Declare parameters only if not already declared (to avoid conflicts with YAML files)
+  if (!this->has_parameter("enable_brake")) {
+    this->declare_parameter("enable_brake", false);
+  }
+  if (!this->has_parameter("deceleration_threshold")) {
+    this->declare_parameter("deceleration_threshold", 0.5);
+  }
+  if (!this->has_parameter("brake_gain")) {
+    this->declare_parameter("brake_gain", 1000.0);
+  }
+  if (!this->has_parameter("max_brake_current")) {
+    this->declare_parameter("max_brake_current", 20000.0);
+  }
+
+  enable_brake_ = this->get_parameter("enable_brake").as_bool();
+  deceleration_threshold_ = this->get_parameter("deceleration_threshold").as_double();
+  brake_gain_ = this->get_parameter("brake_gain").as_double();
+  max_brake_current_ = this->get_parameter("max_brake_current").as_double();
+
+  /// Brake publisher (only create if brake is enabled):
+  if (enable_brake_) {
+    brake_pub_ =
+      this->create_publisher<std_msgs::msg::Float64>(
+      "commands/motor/brake",
+      qos);
+
+    RCLCPP_INFO(
+      get_logger(),
+      "Brake ENABLED - parameters: threshold=%.2f m/s, gain=%.0f A/(m/s), max=%.0f A",
+      deceleration_threshold_, brake_gain_, max_brake_current_);
+  } else {
+    RCLCPP_INFO(get_logger(), "Brake DISABLED - no brake commands will be published");
+  }
+
+  /// Initialize last command with zero speed:
+  last_cmd_.drive.speed = 0.0;
+
   /// Diagnostics:
   diagnostics_ = std::make_shared<diagnostics_type>(this);
   status_ = std::make_shared<status_type>();
@@ -114,7 +152,66 @@ void AckermannMux::updateDiagnostics()
 
 void AckermannMux::publishAckermann(const ackermann_msgs::msg::AckermannDriveStamped::ConstSharedPtr & msg)
 {
-  cmd_pub_->publish(*msg);
+  if (enable_brake_ && brake_pub_) {
+    // Brake enabled: Use speed/brake switching logic
+
+    // Calculate speed difference from last command
+    double current_speed = msg->drive.speed;
+    double last_speed = last_cmd_.drive.speed;
+    double speed_diff = current_speed - last_speed;
+
+    // Determine if decelerating
+    bool is_decelerating = (speed_diff < -deceleration_threshold_);
+
+    if (is_decelerating) {
+      // Decelerating: publish ONLY brake, set speed to 0
+      double brake_current = std::abs(speed_diff) * brake_gain_;
+      brake_current = std::min(brake_current, max_brake_current_);
+
+      // Publish brake command
+      auto brake_msg = std_msgs::msg::Float64();
+      brake_msg.data = brake_current;
+      brake_pub_->publish(brake_msg);
+
+      // Publish ackermann command with speed=0 (steering is maintained)
+      auto modified_msg = *msg;
+      modified_msg.drive.speed = 0.0;
+      cmd_pub_->publish(modified_msg);
+
+      RCLCPP_DEBUG(
+        get_logger(),
+        "Deceleration: brake=%.0f A, speed=0.0 (original: %.2f m/s -> %.2f m/s, diff: %.2f)",
+        brake_current, last_speed, current_speed, speed_diff);
+
+    } else {
+      // Accelerating or maintaining: publish ONLY speed, release brake explicitly
+
+      // Release brake (set to 0)
+      auto brake_msg = std_msgs::msg::Float64();
+      brake_msg.data = 0.0;
+      brake_pub_->publish(brake_msg);
+
+      // Publish normal ackermann command
+      cmd_pub_->publish(*msg);
+
+      RCLCPP_DEBUG(
+        get_logger(),
+        "Acceleration/Maintaining: speed=%.2f m/s (diff: %.2f), brake released",
+        current_speed, speed_diff);
+    }
+
+  } else {
+    // Brake disabled: publish ONLY speed commands, never publish brake
+    cmd_pub_->publish(*msg);
+
+    RCLCPP_DEBUG(
+      get_logger(),
+      "Brake disabled: speed=%.2f m/s (no brake control)",
+      msg->drive.speed);
+  }
+
+  // Store current command for next comparison
+  last_cmd_ = *msg;
 }
 
 template<typename T>

@@ -1,14 +1,17 @@
 path_sector_editor_node:
   ros__parameters:
     # Path to CSV file (x, y, v, kappa format)
-    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1103/mohyun_slam_ekf_v2_iqp.csv"
+    csv_file_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf_iqp.csv"
 
     # Path to map YAML file (will auto-load image, resolution, origin)
     # If not specified, will try to find .yaml file next to the image
-    map_yaml_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/mohyun_1103/mohyun_slam_ekf_v2.yaml"
+    map_yaml_path: "/home/dawgs_nx/f1tenth_dawgs/src/peripheral/maps/songdo_1104/songdo_slam_ekf.yaml"
 
     # Smoothing parameters for lateral offset transitions
     smooth_transition_points: 20  # Number of points for smooth transition at start/end of sector
+
+    # Undo history settings
+    max_undo_history: 50  # Maximum number of undo states to keep
 
     # ROS topic for publishing modified path
     global_path_topic: "/global_centerline"
